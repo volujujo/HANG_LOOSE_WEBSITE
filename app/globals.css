@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFAE7;
+  --foreground: #0A1628;
+  --accent-orange: #F8B85D;
+  --accent-teal: #4D9995;
+  --muted: #97ABB1;
+  --dark: #0A1628;
+  --text-on-dark: #F9F4EC;
+  --text-on-light: #0A1628;
+  /* Map all heading font vars to Tide Sans */
+  --font-space-mono: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-cormorant-garamond: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 @theme inline {
@@ -14,13 +23,71 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FFFAE7;
+    --foreground: #0A1628;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 900;
+}
+
+p,
+li,
+span {
+  font-weight: 500;
+}
+
+@keyframes subtle-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.intro-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+}
+
+.intro-fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vibes-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+}
+
+.vibes-fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.courses-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+}
+
+.courses-card-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -1,0 +1,148 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+export default function HowWeWorkPage() {
+  return (
+    <main className="bg-[#FFFAE7]">
+      {/* Hero */}
+      <section className="pt-32 pb-8 md:pt-36 md:pb-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 mb-6">
+            <Link href="/about/who-we-are" className="text-xs font-bold uppercase tracking-wider text-[#97ABB1] hover:text-[#F8B85D] transition-colors" style={{ fontFamily: 'var(--font-space-mono)' }}>
+              About
+            </Link>
+            <span className="text-[#97ABB1]">/</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>
+              How We Work
+            </span>
+          </div>
+
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
+              Our Approach
+            </p>
+            <h1 className="text-4xl md:text-6xl font-black uppercase text-[#0A1628] mb-6" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
+              How We Work
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Beachfront Based */}
+      <section className="py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div>
+              <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                Location
+              </p>
+              <h2 className="text-2xl md:text-4xl font-black uppercase text-[#0A1628] mb-5" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
+                Beachfront Based
+              </h2>
+              <div className="space-y-3 text-sm md:text-base text-[#0A1628]/60 leading-relaxed">
+                <p>
+                  Our location on Sairee Beach means fast, easy boat access and a stress-free
+                  start to your dives—no crowded pier, no delays, just straight into the ocean.
+                </p>
+                <p>
+                  And when the dives are done, you&apos;re already in the perfect spot to unwind
+                  by the sea, catch the sunset, and enjoy good times with friends right on the beach.
+                </p>
+              </div>
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/photo3.webp"
+                alt="Hang Loose Divers beachfront location on Sairee Beach"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dot Divider */}
+      <div className="flex justify-center py-6">
+        <div className="h-2 w-2 rounded-full bg-[#F8B85D]" />
+      </div>
+
+      {/* Top-Notch Dive Professionals */}
+      <section className="py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/gallery/photo4.webp"
+                alt="Hang Loose Divers professional dive team"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                Our Team
+              </p>
+              <h2 className="text-2xl md:text-4xl font-black uppercase text-[#0A1628] mb-5" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
+                Top-Notch Dive Professionals
+              </h2>
+              <div className="space-y-3 text-sm md:text-base text-[#0A1628]/60 leading-relaxed">
+                <p>
+                  Our team is built on a strong foundation of training and experience, developed
+                  under the guidance of our SSI Award winner in-house Instructor Trainer. This
+                  ensures consistently high teaching standards, clear progression at every level,
+                  and training you can trust—delivered by professionals who know how to turn great
+                  instruction into great dives.
+                </p>
+                <p>
+                  Our Divemasters bring the highest level of commitment to every dive, leading
+                  guests through unforgettable underwater experiences with strong knowledge,
+                  awareness, and a clear focus on safety.
+                </p>
+                <p>
+                  Our instructors teach a wide range of specialties, from marine ecology to
+                  recreational sidemount and advanced wreck diving, allowing divers to explore
+                  and grow in different directions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="py-12 md:py-16">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-xl md:text-3xl font-black uppercase text-[#0A1628] mb-3" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
+            Ready to Dive With Us?
+          </h2>
+          <p className="text-sm text-[#0A1628]/60 leading-relaxed mb-6">
+            Check out our courses or get in touch — we&apos;ll find the perfect fit for you.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+            <Link
+              href="/courses"
+              className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+              style={{ fontFamily: 'var(--font-space-mono)' }}
+            >
+              Explore Courses →
+            </Link>
+            <a
+              href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20diving%20with%20Hang%20Loose%20🤿"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-black uppercase tracking-wider text-[#4D9995] hover:underline underline-offset-4 transition-all duration-300"
+              style={{ fontFamily: 'var(--font-space-mono)' }}
+            >
+              Book Now →
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
+

@@ -73,10 +73,10 @@ export default function LiveaboardPage() {
                   </div>
                   <div className="flex flex-col flex-1 p-5 md:p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <h2 className="text-xl md:text-2xl font-black uppercase text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                      <h2 className="text-2xl md:text-3xl font-black uppercase text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>
                         {trip.title}
                       </h2>
-                      <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#4D9995]" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                      <span className="text-[11px] font-bold uppercase text-[#4D9995]" style={{ fontFamily: 'var(--font-space-mono)' }}>
                         Hosted by Hang Loose
                       </span>
                     </div>
@@ -98,9 +98,11 @@ export default function LiveaboardPage() {
                         {trip.price}
                       </span>
                     </div>
-                    <span className="text-xs font-black uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all" style={{ fontFamily: 'var(--font-space-mono)' }}>
-                      View Trip Details →
-                    </span>
+                    <div className="flex justify-start">
+                      <span className="text-xs font-black uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                        View Trip Details →
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>

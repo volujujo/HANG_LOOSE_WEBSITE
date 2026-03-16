@@ -207,7 +207,7 @@ export default function Home() {
     className="absolute bottom-10 left-1/2 z-10 -translate-x-1/2 opacity-0 animate-[fadeIn_1s_ease-out_0.3s_forwards]"
   >
     <h1
-      className="flex flex-col gap-0 font-black text-lg leading-[1.1] uppercase text-[#F8B85D] text-center"
+      className="flex flex-col gap-0 text-lg leading-[1.1] tracking-tight uppercase text-[#F8B85D] text-center"
       style={{ fontFamily: 'var(--font-space-mono)' }}
     >
       <span>Dive Center</span>
@@ -231,13 +231,13 @@ export default function Home() {
     </p>
 
     <h2
-      className="mb-8 text-4xl md:text-6xl font-black uppercase text-[#0A1628]"
+      className="mb-8 text-3xl md:text-5xl tracking-tight uppercase text-[#0A1628]"
       style={{ fontFamily: 'var(--font-space-mono)' }}
     >
       Diving Adventures in Paradise
     </h2>
 
-    <div className="mx-auto mb-8 h-4 w-4 rounded-full bg-[#F8B85D]" />
+    <div className="mx-auto mb-8 h-2.5 w-2.5 rounded-full bg-[#F8B85D]" />
 
     <p className="text-lg md:text-xl text-black leading-relaxed">
       Welcome to Hang Loose Divers, where quality training meets laid-back island vibes. From
@@ -254,10 +254,10 @@ export default function Home() {
           ref={vibesRef}
           className={`px-6 md:px-12 vibes-fade ${vibesVisible ? 'vibes-fade-visible' : ''}`}
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-8">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-y-7 gap-x-12 md:gap-x-20">
             {/* Diving Level */}
             <div className="flex flex-col items-center text-center">
-              <svg viewBox="0 0 94 22" className="h-10 w-10" aria-hidden="true">
+              <svg viewBox="0 0 94 22" className="h-14 w-14 md:h-16 md:w-16" aria-hidden="true">
                 <path
                   fill="#0A1628"
                   fillRule="evenodd"
@@ -265,14 +265,14 @@ export default function Home() {
                 />
               </svg>
               <p
-                className="mt-2 text-[10px] md:text-xs font-bold tracking-widest text-black uppercase"
-                style={{ fontFamily: 'var(--font-space-mono)' }}
+                className="mt-2 text-lg font-bold tracking-widest text-black uppercase"
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
               >
                 Diving Level
               </p>
               <p
                 className="mt-1 text-lg text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-cormorant-garamond)' }}
+                style={{ fontFamily: 'var(--font-space-mono)' }}
               >
                 Beginner to Pro
               </p>
@@ -280,7 +280,7 @@ export default function Home() {
 
             {/* Vibe */}
             <div className="flex flex-col items-center text-center">
-              <svg viewBox="0 0 70 79" className="h-10 w-10" aria-hidden="true">
+              <svg viewBox="0 0 70 79" className="h-14 w-14 md:h-16 md:w-16" aria-hidden="true">
                 <defs>
                   <path
                     id="icon-flash_svg__a"
@@ -348,14 +348,14 @@ export default function Home() {
                 </g>
               </svg>
               <p
-                className="mt-1 text-xs font-bold tracking-widest text-black uppercase"
-                style={{ fontFamily: 'var(--font-space-mono)' }}
+                className="mt-1 text-lg font-bold tracking-widest text-black uppercase"
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
               >
                 Vibe
               </p>
               <p
                 className="mt-1 text-lg text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-cormorant-garamond)' }}
+                style={{ fontFamily: 'var(--font-space-mono)' }}
               >
                 Good Vibes Only
               </p>
@@ -365,7 +365,7 @@ export default function Home() {
             <div className="flex flex-col items-center text-center">
               <svg
                 viewBox="0 0 71 62"
-                className="h-10 w-10"
+                className="h-14 w-14 md:h-16 md:w-16"
                 fill="#0A1628"
                 stroke="#0A1628"
                 strokeWidth="1"
@@ -374,44 +374,16 @@ export default function Home() {
                 <path d="M50.451 37.6C48.41 47.067 38.27 51.69 31.37 50.487 20.9 48.66 14.48 41.093 15.413 31.443c.425-4.423 3.077-7.79 6.13-10.804 7.146-7.055 17.606-4.603 23.55.327 5.655 4.687 7.224 9.78 5.354 16.637zM35.64 20.278c-3.12-.938-6.63-.756-9.8 1.44-6.168 4.276-9.65 10.895-6.033 18.035 2.706 5.341 7.464 7.925 13.29 8.345 5.332.386 9.97-1.686 12.704-6.169 2.798-4.585 3.41-9.785.333-14.697-2.292-3.66-5.844-5.705-10.493-6.958zM8.817 25.97c-.99.081-1.982.238-2.97.229-1.463-.016-2.942-.055-4.379-.29C.976 25.827.413 25.191.22 24.68c-.087-.235.62-1.08 1.015-1.117 2.712-.254 5.344.013 7.6 1.683q-.009.362-.022.723zM23.634 8.327c-.532-1.383-1.053-2.474-1.366-3.623a13.5 13.5 0 0 1-.448-3.256c-.006-.399.47-.906.861-1.158.178-.117.775.174 1.022.43 1.358 1.418 1.488 5.548-.069 7.607M70.252 41.396c-1.416.918-5.532.549-6.577-.629-.687-.775-.423-1.404.46-1.787 1.395-.604 5.327.968 6.117 2.416M9.035 38.132c-.765.517-1.47 1.218-2.317 1.501-1.147.382-2.398.532-3.615.585-.445.02-1.08-.435-1.31-.847-.118-.214.362-1.037.738-1.195 2.026-.84 4.136-1.007 6.263-.554.079.17.161.343.241.51M16.163 48.8c-1.245 1.144-2.484 2.358-3.828 3.445-.267.217-1.15.104-1.37-.166-.245-.295-.26-1.156-.01-1.407 1.193-1.19 2.483-2.284 3.8-3.336.22-.178.858-.123 1.088.073.227.192.181.705.314 1.386zM67.376 22.55c-.2.362-.318.924-.62 1.052-1.605.667-3.24 1.294-4.91 1.765-.382.11-.956-.457-1.442-.71.31-.505.53-1.347.948-1.46 1.878-.504 3.813-.802 5.729-1.175.1.176.195.351.295.527M7.071 10.967c1.94-.943 3.205.304 4.421 1.145.79.543 1.217 1.602 1.806 2.43-.986-.14-2.063-.074-2.934-.465-1.342-.604-2.847-1.203-3.294-3.107zM39.653 5.5c.231-.725.352-1.517.738-2.15.254-.413.897-.595 1.365-.878.27.473.84 1.01.759 1.41a26 26 0 0 1-1.3 4.349c-.15.38-.88.53-1.341.786-.226-.487-.635-.972-.63-1.456.007-.68.32-1.359.502-2.035l-.09-.024zM50.673 12.819c-.42-2.337 1.37-6.401 3.28-7.454.507 2.313-1.237 6.273-3.28 7.454M28.415 61.678c-.811-1.283-.268-5.16.871-5.948.252-.173.814-.31.93-.185.288.307.633.84.538 1.169-.49 1.732-1.109 3.426-1.683 5.132-.22-.059-.44-.11-.66-.17zM44.566 61.574c.085-1.753.137-3.508.293-5.253.024-.267.524-.614.853-.679.213-.041.61.313.763.576.709 1.215-.053 4.442-1.228 5.404l-.683-.052zM61.583 53.736c-2.383-1.181-4.03-2.687-5.106-4.927 2.026-.263 4.653 2.17 5.106 4.927" />
               </svg>
               <p
-                className="mt-1 text-xs font-bold tracking-widest text-black uppercase"
-                style={{ fontFamily: 'var(--font-space-mono)' }}
+                className="mt-1 text-lg font-bold tracking-widest text-black uppercase"
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
               >
                 Season
               </p>
               <p
                 className="mt-1 text-lg text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-cormorant-garamond)' }}
-              >
-                All Year Around
-              </p>
-            </div>
-
-            {/* Code */}
-            <div className="flex flex-col items-center text-center">
-              <svg
-                viewBox="0 0 60 40"
-                className="h-10 w-10"
-                fill="none"
-                stroke="#0A1628"
-                strokeWidth="1.5"
-                aria-hidden="true"
-              >
-                <ellipse cx="25" cy="20" rx="18" ry="10" />
-                <path d="M43 20 L55 10 L55 30 Z" />
-                <circle cx="15" cy="17" r="2" fill="#0A1628" />
-              </svg>
-              <p
-                className="mt-1 text-xs font-bold tracking-widest text-black uppercase"
                 style={{ fontFamily: 'var(--font-space-mono)' }}
               >
-                Code
-              </p>
-              <p
-                className="mt-1 text-xl text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-cormorant-garamond)' }}
-              >
-                Respect the Locals
+                All Year Around
               </p>
             </div>
           </div>
@@ -422,20 +394,20 @@ export default function Home() {
       <GallerySection />
       {/* Dot Divider */}
 <div className="bg-[#FFFAE7] flex justify-center py-4">
-  <div className="h-4 w-4 rounded-full bg-[#F8B85D]" />
+  <div className="h-2.5 w-2.5 rounded-full bg-[#F8B85D]" />
 </div>
 
       {/* Top Courses */}
       <section className="bg-[#FFFAE7] pt-14 pb-14">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <p
-            className="text-xs font-black tracking-[0.2em] uppercase text-[#4D9995]"
+            className="text-xs font-semibold tracking-[0.2em] uppercase text-[#4D9995]"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Featured Courses
           </p>
           <h2
-            className="mt-3 text-4xl md:text-5xl font-black uppercase text-[#0A1628]"
+            className="mt-3 text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628]"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Discover Our Top Dive Courses
@@ -452,11 +424,11 @@ export default function Home() {
 
         <div
           ref={coursesRef}
-          className="mx-auto mt-10 max-w-7xl px-4 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch"
+          className="mx-auto mt-12 max-w-6xl px-6 flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-hide"
         >
           {/* Card 1 – Try Scuba Diving */}
           <div
-            className={`flex flex-col h-full rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
+            className={`snap-center shrink-0 w-[80vw] md:w-auto flex flex-col h-full rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
               coursesVisible ? 'courses-card-visible' : ''
             }`}
             style={{ transitionDelay: coursesVisible ? '0ms' : '0ms' }}
@@ -472,8 +444,8 @@ export default function Home() {
 
             <div className="flex flex-col flex-1 p-5 md:p-6">
               <h3
-                className="mt-2 text-lg md:text-xl font-black uppercase text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-space-mono)' }}
+                className="mt-2 text-xl md:text-2xl font-black uppercase text-[#0A1628]"
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 900 }}
               >
                 Try Scuba Diving
               </h3>
@@ -534,20 +506,22 @@ export default function Home() {
                   </div>
                 </div>
 
-                <Link
-                  href="/courses/beginners/try-scuba"
-                  className="inline-flex border-none bg-transparent text-xs md:text-sm font-black uppercase tracking-wider text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4"
-                  style={{ fontFamily: 'var(--font-space-mono)' }}
-                >
-                  Learn More
-                </Link>
+                <div className="flex justify-start">
+                  <Link
+                    href="/courses/beginners/try-scuba"
+                    className="inline-flex border-none bg-transparent text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-6 py-3"
+                    style={{ fontFamily: 'var(--font-space-mono)' }}
+                  >
+                    Learn More
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Card 2 – Open Water Diver */}
           <div
-            className={`flex flex-col h-full rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
+            className={`snap-center shrink-0 w-[80vw] md:w-auto flex flex-col h-full rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
               coursesVisible ? 'courses-card-visible' : ''
             }`}
             style={{ transitionDelay: coursesVisible ? '120ms' : '0ms' }}
@@ -563,8 +537,8 @@ export default function Home() {
 
             <div className="flex flex-col flex-1 p-5 md:p-6">
               <h3
-                className="mt-2 text-lg md:text-xl font-black uppercase text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-space-mono)' }}
+                className="mt-2 text-xl md:text-2xl font-black uppercase text-[#0A1628]"
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 900 }}
               >
                 Open Water Diver
               </h3>
@@ -624,20 +598,22 @@ export default function Home() {
                   </div>
                 </div>
 
-                <Link
-                  href="/courses/beginners/open-water"
-                  className="inline-flex border-none bg-transparent text-xs md:text-sm font-black uppercase tracking-wider text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4"
-                  style={{ fontFamily: 'var(--font-space-mono)' }}
-                >
-                  Learn More
-                </Link>
+                <div className="flex justify-start">
+                  <Link
+                    href="/courses/beginners/open-water"
+                    className="inline-flex border-none bg-transparent text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-6 py-3"
+                    style={{ fontFamily: 'var(--font-space-mono)' }}
+                  >
+                    Learn More
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Card 3 – Advanced Open Water Diver */}
           <div
-            className={`flex flex-col h-full rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
+            className={`snap-center shrink-0 w-[80vw] md:w-auto flex flex-col h-full rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
               coursesVisible ? 'courses-card-visible' : ''
             }`}
             style={{ transitionDelay: coursesVisible ? '240ms' : '0ms' }}
@@ -653,8 +629,8 @@ export default function Home() {
 
             <div className="flex flex-col flex-1 p-5 md:p-6">
               <h3
-                className="mt-2 text-lg md:text-xl font-black uppercase text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-space-mono)' }}
+                className="mt-2 text-xl md:text-2xl font-black uppercase text-[#0A1628]"
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 900 }}
               >
                 Advanced Open Water Diver
               </h3>
@@ -715,13 +691,15 @@ export default function Home() {
                   </div>
                 </div>
 
-                <Link
-                  href="/courses/advanced/advanced-open-water"
-                  className="inline-flex border-none bg-transparent text-xs md:text-sm font-black uppercase tracking-wider text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4"
-                  style={{ fontFamily: 'var(--font-space-mono)' }}
-                >
-                  Learn More
-                </Link>
+                <div className="flex justify-start">
+                  <Link
+                    href="/courses/advanced/advanced-open-water"
+                    className="inline-flex border-none bg-transparent text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-6 py-3"
+                    style={{ fontFamily: 'var(--font-space-mono)' }}
+                  >
+                    Learn More
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -730,14 +708,14 @@ export default function Home() {
         {/* Bottom CTA */}
         <div className="mx-auto mt-16 max-w-3xl px-6 text-center">
           <p
-            className="text-2xl font-black uppercase text-[#0A1628]"
+            className="text-2xl font-normal uppercase text-[#0A1628]"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Find the Right Program for You
           </p>
           <Link
             href="/courses"
-            className="mt-4 inline-flex border-none bg-transparent px-8 py-3 text-sm font-black uppercase tracking-wider text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4"
+            className="mt-4 inline-flex border-none bg-transparent px-8 py-4 text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Explore All Courses
@@ -747,7 +725,7 @@ export default function Home() {
 
       {/* Dot Divider */}
       <div className="bg-[#FFFAE7] flex justify-center py-4">
-        <div className="h-2 w-2 rounded-full bg-[#F8B85D]" />
+        <div className="h-2.5 w-2.5 rounded-full bg-[#F8B85D]" />
       </div>
 
       {/* Who We Are */}
@@ -774,7 +752,7 @@ export default function Home() {
                 Who We Are
               </p>
               <h2
-                className="text-3xl md:text-5xl font-black uppercase text-[#0A1628] mb-6"
+                className="text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628] mb-6"
                 style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
               >
                 By the Ocean Lies the Home of Good Vibes
@@ -788,7 +766,7 @@ export default function Home() {
               </p>
               <Link
                 href="/about/who-we-are"
-                className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+                className="text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-8 py-4"
                 style={{ fontFamily: 'var(--font-space-mono)' }}
               >
                 More About Who We Are →
@@ -811,7 +789,7 @@ export default function Home() {
                 How We Work
               </p>
               <h2
-                className="text-3xl md:text-5xl font-black uppercase text-[#0A1628] mb-6"
+                className="text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628] mb-6"
                 style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
               >
                 The Hang Loose Way
@@ -826,7 +804,7 @@ export default function Home() {
               </p>
               <Link
                 href="/about/how-we-work"
-                className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+                className="text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-8 py-4"
                 style={{ fontFamily: 'var(--font-space-mono)' }}
               >
                 More About How We Work →
@@ -849,7 +827,7 @@ export default function Home() {
 
       {/* Dot Divider */}
       <div className="bg-[#FFFAE7] flex justify-center py-8">
-        <div className="h-2 w-2 rounded-full bg-[#F8B85D]" />
+        <div className="h-2.5 w-2.5 rounded-full bg-[#F8B85D]" />
       </div>
 
       {/* Google Reviews Carousel */}
@@ -864,7 +842,7 @@ export default function Home() {
               Reviews
             </p>
             <h2
-              className="text-3xl md:text-5xl font-black uppercase text-[#0A1628] mb-6"
+              className="text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628] mb-6"
               style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
             >
               Loved by Divers
@@ -1005,7 +983,7 @@ export default function Home() {
               href={googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+              className="text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-8 py-4"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Read All Reviews on Google →
@@ -1016,7 +994,7 @@ export default function Home() {
 
       {/* Dot Divider */}
       <div className="bg-[#FFFAE7] flex justify-center py-8">
-        <div className="h-2 w-2 rounded-full bg-[#F8B85D]" />
+        <div className="h-2.5 w-2.5 rounded-full bg-[#F8B85D]" />
       </div>
 
       {/* FAQ */}
@@ -1031,7 +1009,7 @@ export default function Home() {
               FAQ
             </p>
             <h2
-              className="text-3xl md:text-5xl font-black uppercase text-[#0A1628]"
+              className="text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628]"
               style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
             >
               Got Questions?
@@ -1086,7 +1064,7 @@ export default function Home() {
             <p className="text-sm text-[#97ABB1] mb-4">Still have questions?</p>
             <Link
               href="/contact"
-              className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+              className="text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-8 py-4"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Get in Touch →

@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+/* Tide Sans – public/fonts/ */
+@font-face {
+  font-family: 'Tide Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/tidesans-400lildude.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Tide Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/tidesans-600bunny.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Tide Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/tidesans-900dude.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Tide Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/tidesans-300lilkahuna.ttf') format('truetype');
+}
+
 :root {
   --background: #FFFAE7;
   --foreground: #0A1628;
@@ -9,7 +39,6 @@
   --dark: #0A1628;
   --text-on-dark: #F9F4EC;
   --text-on-light: #0A1628;
-  /* Map all heading font vars to Tide Sans */
   --font-space-mono: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-cormorant-garamond: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -17,8 +46,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,17 +57,44 @@
   }
 }
 
+html {
+  font-family: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 900;
+  font-weight: 300;
+}
+
+button,
+a,
+[role='button'] {
+  font-family: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  font-family: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
 }
 
 p,
 li,
-span {
-  font-weight: 500;
+span,
+div,
+label,
+input,
+textarea {
+  font-family: 'Tide Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 300;
 }
 
 @keyframes subtle-pulse {
@@ -90,4 +146,12 @@ span {
 .courses-card-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

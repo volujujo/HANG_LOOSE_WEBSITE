@@ -207,12 +207,14 @@ export default function AdvancedPage() {
                       </div>
                     </div>
                     {/* CTA */}
-                    <span
-                      className="text-xs font-black uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
-                      style={{ fontFamily: 'var(--font-space-mono)' }}
-                    >
-                      Learn More →
-                    </span>
+                    <div className="flex justify-start">
+                      <span
+                        className="text-xs font-black uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
+                        style={{ fontFamily: 'var(--font-space-mono)' }}
+                      >
+                        Learn More →
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>

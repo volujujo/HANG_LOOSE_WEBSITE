@@ -98,30 +98,33 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#FFFAE7] shadow-lg py-3'
+          ? 'bg-[#FFFAE7] shadow-lg py-1'
           : isHome
-            ? 'bg-transparent py-5'
-            : 'bg-[#FFFAE7] py-5'
+            ? 'bg-transparent py-1.5'
+            : 'bg-[#FFFAE7] py-1.5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-center relative">
+      <div className="max-w-7xl mx-auto px-3 md:px-4 flex items-center justify-between gap-2">
         {/* Logo */}
-        <Link href="/" className="absolute left-6 flex items-center [&>span]:bg-transparent">
+        <Link href="/" className="flex items-center !p-0 shrink-0 [&>span]:bg-transparent">
           <Image
             src="/photos/logo-shaka.png"
             alt="Hang Loose Divers"
-            width={48}
-            height={48}
+            width={40}
+            height={40}
             unoptimized
-            className="bg-transparent transition-all duration-300"
+            className="transition-all duration-300"
             style={{
-              filter: isTransparent ? 'brightness(0) invert(1)' : 'none',
+              // Keep shaka yellow on all homepage states, normal colors on inner pages
+              filter: isHome
+                ? 'brightness(0) saturate(100%) invert(78%) sepia(40%) saturate(600%) hue-rotate(350deg) brightness(100%)'
+                : 'brightness(1)',
             }}
           />
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center justify-center gap-8">
+        <ul className="hidden md:flex flex-1 items-center justify-center gap-6 flex-nowrap">
           {navItems.map((item) => (
             <li
               key={item.label}
@@ -131,8 +134,12 @@ export default function Navbar() {
             >
               <Link
                 href={item.href}
-                className={`inline-block align-middle leading-none text-sm font-bold uppercase tracking-wider transition-colors duration-200 ${textColor} ${hoverColor}`}
-                style={{ fontFamily: 'var(--font-space-mono)' }}
+                className={`!p-0 !m-0 inline-block leading-none text-[15px] font-bold uppercase tracking-wide whitespace-nowrap transition-colors duration-200 ${
+                  pathname.startsWith(item.href) && item.href !== '/'
+                    ? 'text-[#F8B85D]'
+                    : textColor
+                } ${hoverColor}`}
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
               >
                 {item.label}
               </Link>
@@ -151,7 +158,7 @@ export default function Navbar() {
                               group.group === 'Professionals' ? '/courses/professionals' :
                               '#'
                             }
-                            className="block text-xs font-bold uppercase tracking-wider text-[#97ABB1] mb-3 hover:text-[#F8B85D] transition-colors"
+                            className="!p-0 block text-xs font-bold uppercase tracking-wider text-[#97ABB1] mb-3 hover:text-[#F8B85D] transition-colors"
                             style={{ fontFamily: 'var(--font-space-mono)' }}
                           >
                             {group.group}
@@ -162,7 +169,7 @@ export default function Navbar() {
                             <li key={subItem.label}>
                               <Link
                                 href={subItem.href}
-                                className="text-sm font-bold uppercase tracking-wider text-[#0A1628] hover:text-[#4D9995] transition-colors"
+                                className="!p-0 text-sm font-bold uppercase tracking-wider text-[#0A1628] hover:text-[#4D9995] transition-colors"
                                 style={{ fontFamily: 'var(--font-space-mono)' }}
                               >
                                 {subItem.label}
@@ -177,15 +184,18 @@ export default function Navbar() {
               )}
             </li>
           ))}
+        </ul>
 
+        {/* Desktop Right Side: social + CTA */}
+        <div className="hidden md:flex items-center gap-2">
           {/* Social Icons (Desktop) */}
-          <li className="hidden md:flex items-center gap-3 mr-2">
+          <div className="flex items-center gap-2 mr-1">
             <a
               href="https://www.instagram.com/hangloosedivers/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Hang Loose Divers on Instagram"
-              className={`${textColor} ${hoverColor} transition-colors duration-200`}
+              className={`${textColor} ${hoverColor} !p-0 transition-colors duration-200`}
             >
               <svg
                 className="w-5 h-5"
@@ -205,7 +215,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Hang Loose Divers on TikTok"
-              className={`${textColor} ${hoverColor} transition-colors duration-200`}
+              className={`${textColor} ${hoverColor} !p-0 transition-colors duration-200`}
             >
               <svg
                 className="w-5 h-5"
@@ -216,25 +226,23 @@ export default function Navbar() {
                 <path d="M21 8.5a5.5 5.5 0 01-4.11-1.9v7.17A6.23 6.23 0 0110.62 20 6.18 6.18 0 014 13.88 6.18 6.18 0 0110.62 7.8c.27 0 .53.02.79.05v2.47a3.73 3.73 0 00-.79-.08 3.7 3.7 0 00-3.7 3.64 3.7 3.7 0 003.7 3.65 3.73 3.73 0 003.68-3.38l.02-.36V3h2.24a5.5 5.5 0 004.14 4.25V8.5z" />
               </svg>
             </a>
-          </li>
+          </div>
 
           {/* CTA Button — always orange */}
-          <li className="relative">
-            <a
-              href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20booking%20a%20dive%20course%20🤿"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block align-middle leading-none -mt-px text-sm font-bold uppercase tracking-wider transition-colors duration-200 text-[#F8B85D] hover:underline underline-offset-4"
-              style={{ fontFamily: 'var(--font-space-mono)' }}
-            >
-              Book Now
-            </a>
-          </li>
-        </ul>
+          <a
+            href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20booking%20a%20dive%20course%20🤿"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block align-middle leading-none -mt-px text-lg font-bold uppercase tracking-wider whitespace-nowrap !p-0 transition-colors duration-200 text-[#F8B85D] hover:underline underline-offset-4"
+            style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
+          >
+            Book Now
+          </a>
+        </div>
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden absolute right-6 flex flex-col gap-1.5 p-2"
+          className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -246,12 +254,12 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#FFFAE7] px-6 py-6 flex flex-col gap-4">
+        <div className="md:hidden bg-[#FFFAE7] px-6 py-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
           {navItems.map((item) => (
             <div key={item.label}>
               <Link
                 href={item.href}
-                className="text-[#0A1628] font-bold uppercase tracking-wider text-base block mb-2"
+                className="!p-0 text-[#0A1628] font-bold uppercase tracking-wider text-base block mb-2"
                 style={{ fontFamily: 'var(--font-space-mono)' }}
                 onClick={() => setMobileOpen(false)}
               >
@@ -264,7 +272,7 @@ export default function Navbar() {
                       <Link
                         key={subItem.label}
                         href={subItem.href}
-                        className="text-black text-sm font-bold uppercase tracking-wider hover:text-[#F8B85D] transition-colors"
+                          className="!p-0 text-black text-sm font-bold uppercase tracking-wider hover:text-[#F8B85D] transition-colors"
                         style={{ fontFamily: 'var(--font-space-mono)' }}
                         onClick={() => setMobileOpen(false)}
                       >
@@ -280,7 +288,7 @@ export default function Navbar() {
             href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20booking%20a%20dive%20course%20🤿"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 border-none bg-transparent text-[#F8B85D] font-black uppercase tracking-wider text-center py-3 hover:underline transition-all duration-300"
+            className="!p-0 mt-4 border-none bg-transparent text-[#F8B85D] font-black uppercase tracking-wider text-center py-3 hover:underline transition-all duration-300"
             style={{ fontFamily: 'var(--font-space-mono)' }}
             onClick={() => setMobileOpen(false)}
           >

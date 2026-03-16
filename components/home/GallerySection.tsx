@@ -30,8 +30,8 @@ export function GallerySection() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        {/* Top row: large photo1 */}
-        <div className="relative overflow-hidden rounded-2xl aspect-[4/5]">
+        {/* Top row: large photo1 — full width, half the previous height */}
+        <div className="relative overflow-hidden rounded-2xl aspect-[8/5]">
           <Image
             src="/gallery/photo1.webp"
             alt="Diving experience in Koh Tao"
@@ -77,7 +77,7 @@ export function GallerySection() {
       {/* Desktop layout: exact match to reference image */}
       {/* Layout: Left ~50% photo1 (tall), Middle ~25% photo2 (tall), Right ~25% photo3 + photo4 (stacked) */}
       <div
-        className={`hidden md:flex gap-4 h-[580px] lg:h-[680px] xl:h-[720px] transition-all duration-700 ease-out ${
+        className={`hidden md:flex gap-4 h-[493px] lg:h-[578px] xl:h-[612px] transition-all duration-700 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >

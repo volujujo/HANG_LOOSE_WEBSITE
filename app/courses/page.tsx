@@ -58,10 +58,10 @@ export default function CoursesPage() {
       {/* Category Cards */}
       <section className="pb-16 md:pb-20">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex md:grid md:grid-cols-2 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
             {categories.map((cat) => (
               <Link key={cat.title} href={cat.href} className="group">
-                <div className="flex flex-col h-full bg-[#F0EBD8] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <div className="snap-center shrink-0 w-[80vw] md:w-auto flex flex-col h-full bg-[#F0EBD8] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                   {/* Image */}
                   <div className="relative w-full aspect-[16/10]">
                     <Image
@@ -75,7 +75,7 @@ export default function CoursesPage() {
                   {/* Content */}
                   <div className="flex flex-col flex-1 p-5 md:p-6">
                     <h2
-                      className="text-xl md:text-2xl font-black uppercase text-[#0A1628] mb-3"
+                      className="text-2xl md:text-3xl font-black uppercase text-[#0A1628] mb-3"
                       style={{ fontFamily: 'var(--font-space-mono)' }}
                     >
                       {cat.title}
@@ -83,12 +83,14 @@ export default function CoursesPage() {
                     <p className="text-sm text-[#0A1628]/60 leading-relaxed flex-1 mb-4">
                       {cat.description}
                     </p>
-                    <span
-                      className="text-xs font-black uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
-                      style={{ fontFamily: 'var(--font-space-mono)' }}
-                    >
-                      Explore Courses →
-                    </span>
+                    <div className="mt-1 flex justify-start">
+                      <span
+                        className="text-xs font-black uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
+                        style={{ fontFamily: 'var(--font-space-mono)' }}
+                      >
+                        Explore Courses →
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>

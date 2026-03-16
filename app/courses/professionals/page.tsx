@@ -93,7 +93,7 @@ export default function ProfessionalsPage() {
                   {/* Content */}
                   <div className="flex flex-col flex-1 p-5 md:p-6">
                     <h2
-                      className="text-xl md:text-2xl font-black uppercase text-[#0A1628] mb-3"
+                      className="text-2xl md:text-3xl font-black uppercase text-[#0A1628] mb-3"
                       style={{ fontFamily: 'var(--font-space-mono)' }}
                     >
                       {course.title}
@@ -125,12 +125,14 @@ export default function ProfessionalsPage() {
                       </div>
                     </div>
                     {/* CTA */}
-                    <span
-                      className="text-xs font-black uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
-                      style={{ fontFamily: 'var(--font-space-mono)' }}
-                    >
-                      Learn More →
-                    </span>
+                    <div className="flex justify-start">
+                      <span
+                        className="text-xs font-black uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
+                        style={{ fontFamily: 'var(--font-space-mono)' }}
+                      >
+                        Learn More →
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>

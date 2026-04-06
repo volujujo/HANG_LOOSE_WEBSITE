@@ -399,7 +399,7 @@ export default function Home() {
             className="mt-3 text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628]"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
-            Discover Our Top Dive Courses
+            Discover Our Top<br />Dive Courses
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-lg text-black leading-relaxed">
             Find your flow with our most popular dive courses, built to fit your travel plans,

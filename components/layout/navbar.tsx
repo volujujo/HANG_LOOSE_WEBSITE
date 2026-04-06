@@ -78,6 +78,7 @@ const navItems = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [openMenu, setOpenMenu] = useState<string | null>(null)
+  const [openGroup, setOpenGroup] = useState<string | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
   const isHome = pathname === '/'
@@ -104,27 +105,28 @@ export default function Navbar() {
             : 'bg-[#FFFAE7] py-1.5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-3 md:px-4 flex items-center justify-between gap-2">
-        {/* Logo */}
-        <Link href="/" className="flex items-center !p-0 shrink-0 [&>span]:bg-transparent">
-          <Image
-            src="/photos/logo-shaka.png"
-            alt="Hang Loose Divers"
-            width={40}
-            height={40}
-            unoptimized
-            className="transition-all duration-300"
-            style={{
-              // Keep shaka yellow on all homepage states, normal colors on inner pages
-              filter: isHome
-                ? 'brightness(0) saturate(100%) invert(78%) sepia(40%) saturate(600%) hue-rotate(350deg) brightness(100%)'
-                : 'brightness(1)',
-            }}
-          />
-        </Link>
+      <div className="max-w-7xl mx-auto px-3 md:px-4 flex items-center">
+        {/* Logo — left side, flex-1 so it mirrors the right side width */}
+        <div className="flex-1 flex items-center">
+          <Link href="/" className="flex items-center !p-0 shrink-0 [&>span]:bg-transparent">
+            <Image
+              src="/photos/logo-shaka.png"
+              alt="Hang Loose Divers"
+              width={68}
+              height={68}
+              unoptimized
+              className="transition-all duration-300"
+              style={{
+                filter: isHome
+                  ? 'brightness(0) saturate(100%) invert(78%) sepia(40%) saturate(600%) hue-rotate(350deg) brightness(100%)'
+                  : 'brightness(1)',
+              }}
+            />
+          </Link>
+        </div>
 
-        {/* Desktop Nav */}
-        <ul className="hidden md:flex flex-1 items-center justify-center gap-6 flex-nowrap">
+        {/* Desktop Nav — truly centered */}
+        <ul className="hidden md:flex items-center justify-center gap-6 flex-nowrap">
           {navItems.map((item) => (
             <li
               key={item.label}
@@ -134,12 +136,12 @@ export default function Navbar() {
             >
               <Link
                 href={item.href}
-                className={`!p-0 !m-0 inline-block leading-none text-[15px] font-bold uppercase tracking-wide whitespace-nowrap transition-colors duration-200 ${
+                className={`!p-0 !m-0 inline-block leading-none text-[15px] font-normal uppercase tracking-wide whitespace-nowrap transition-colors duration-200 ${
                   pathname.startsWith(item.href) && item.href !== '/'
                     ? 'text-[#F8B85D]'
                     : textColor
                 } ${hoverColor}`}
-                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 400 }}
               >
                 {item.label}
               </Link>
@@ -147,49 +149,80 @@ export default function Navbar() {
               {/* Dropdown */}
               {item.dropdown && openMenu === item.label && (
                 <div className="absolute top-full left-0 mt-0 pt-2">
-                  <div className="bg-[#FFFAE7] rounded-lg shadow-2xl p-6 min-w-[280px] flex gap-8">
-                    {item.dropdown.map((group) => (
-                      <div key={group.group}>
-                        {group.group && (
+                  {item.label === 'Courses' ? (
+                    <div
+                      className="bg-[#FFFAE7] rounded-lg shadow-2xl flex"
+                      onMouseLeave={() => setOpenGroup(null)}
+                    >
+                      {/* Left: 3 group names */}
+                      <div className="py-4 min-w-[200px]">
+                        {item.dropdown.map((group) => (
                           <Link
+                            key={group.group}
                             href={
                               group.group === 'Beginners' ? '/courses/beginners' :
                               group.group === 'Advanced' ? '/courses/advanced' :
-                              group.group === 'Professionals' ? '/courses/professionals' :
-                              '#'
+                              '/courses/professionals'
                             }
-                            className="!p-0 block text-xs font-bold uppercase tracking-wider text-[#97ABB1] mb-3 hover:text-[#F8B85D] transition-colors"
-                            style={{ fontFamily: 'var(--font-space-mono)' }}
+                            onMouseEnter={() => setOpenGroup(group.group)}
+                            className={`!p-0 flex items-center justify-between px-6 py-3 transition-colors duration-150 ${
+                              openGroup === group.group ? 'text-[#F8B85D]' : 'text-[#0A1628] hover:text-[#F8B85D]'
+                            }`}
                           >
-                            {group.group}
+                            <span
+                              className="text-[15px] font-normal uppercase tracking-wider"
+                              style={{ fontFamily: 'var(--font-space-mono)' }}
+                            >
+                              {group.group}
+                            </span>
+                            <span className="ml-8 text-sm opacity-40">›</span>
                           </Link>
-                        )}
-                        <ul className="flex flex-col gap-2">
-                          {group.items.map((subItem) => (
-                            <li key={subItem.label}>
+                        ))}
+                      </div>
+
+                      {/* Right: sub-items flyout */}
+                      {openGroup && (
+                        <div className="border-l border-[#0A1628]/10 py-4 px-6 min-w-[220px] flex flex-col gap-3 justify-center">
+                          {item.dropdown
+                            .find((g) => g.group === openGroup)
+                            ?.items.map((subItem) => (
                               <Link
+                                key={subItem.label}
                                 href={subItem.href}
-                                className="!p-0 text-sm font-bold uppercase tracking-wider text-[#0A1628] hover:text-[#4D9995] transition-colors"
+                                className="!p-0 text-[15px] font-normal uppercase tracking-wider text-[#0A1628] hover:text-[#97ABB1] transition-colors"
                                 style={{ fontFamily: 'var(--font-space-mono)' }}
                               >
                                 {subItem.label}
                               </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
+                            ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="bg-[#FFFAE7] rounded-lg shadow-2xl p-6 min-w-[180px] flex flex-col gap-2">
+                      {item.dropdown.flatMap((group) =>
+                        group.items.map((subItem) => (
+                          <Link
+                            key={subItem.label}
+                            href={subItem.href}
+                            className="!p-0 text-sm font-normal uppercase tracking-wider text-[#0A1628] hover:text-[#97ABB1] transition-colors"
+                            style={{ fontFamily: 'var(--font-space-mono)' }}
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))
+                      )}
+                    </div>
+                  )}
                 </div>
               )}
             </li>
           ))}
         </ul>
 
-        {/* Desktop Right Side: social + CTA */}
-        <div className="hidden md:flex items-center gap-2">
-          {/* Social Icons (Desktop) */}
-          <div className="flex items-center gap-2 mr-1">
+        {/* Desktop Right Side: social icons */}
+        <div className="flex-1 hidden md:flex items-center justify-end gap-2">
+          <div className="flex items-center gap-2">
             <a
               href="https://www.instagram.com/hangloosedivers/"
               target="_blank"
@@ -227,17 +260,6 @@ export default function Navbar() {
               </svg>
             </a>
           </div>
-
-          {/* CTA Button — always orange */}
-          <a
-            href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20booking%20a%20dive%20course%20🤿"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block align-middle leading-none -mt-px text-lg font-bold uppercase tracking-wider whitespace-nowrap !p-0 transition-colors duration-200 text-[#F8B85D] hover:underline underline-offset-4"
-            style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
-          >
-            Book Now
-          </a>
         </div>
 
         {/* Mobile Hamburger */}
@@ -267,33 +289,39 @@ export default function Navbar() {
               </Link>
               {item.dropdown && (
                 <div className="pl-4 flex flex-col gap-1">
-                  {item.dropdown.flatMap((group) =>
-                    group.items.map((subItem) => (
-                      <Link
-                        key={subItem.label}
-                        href={subItem.href}
-                          className="!p-0 text-black text-sm font-bold uppercase tracking-wider hover:text-[#F8B85D] transition-colors"
-                        style={{ fontFamily: 'var(--font-space-mono)' }}
-                        onClick={() => setMobileOpen(false)}
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))
-                  )}
+                  {item.label === 'Courses'
+                    ? item.dropdown.map((group) => (
+                        <Link
+                          key={group.group}
+                          href={
+                            group.group === 'Beginners' ? '/courses/beginners' :
+                            group.group === 'Advanced' ? '/courses/advanced' :
+                            '/courses/professionals'
+                          }
+                          className="!p-0 text-black text-sm font-normal uppercase tracking-wider hover:text-[#F8B85D] transition-colors"
+                          style={{ fontFamily: 'var(--font-space-mono)' }}
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {group.group}
+                        </Link>
+                      ))
+                    : item.dropdown.flatMap((group) =>
+                        group.items.map((subItem) => (
+                          <Link
+                            key={subItem.label}
+                            href={subItem.href}
+                            className="!p-0 text-black text-sm font-normal uppercase tracking-wider hover:text-[#F8B85D] transition-colors"
+                            style={{ fontFamily: 'var(--font-space-mono)' }}
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))
+                      )}
                 </div>
               )}
             </div>
           ))}
-          <a
-            href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20booking%20a%20dive%20course%20🤿"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="!p-0 mt-4 border-none bg-transparent text-[#F8B85D] font-black uppercase tracking-wider text-center py-3 hover:underline transition-all duration-300"
-            style={{ fontFamily: 'var(--font-space-mono)' }}
-            onClick={() => setMobileOpen(false)}
-          >
-            Book Now
-          </a>
         </div>
       )}
     </nav>

@@ -127,15 +127,15 @@ export default function AdvancedPage() {
             </span>
           </div>
 
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
             <p
-              className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+              className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Advanced & Specialties
             </p>
             <h1
-              className="text-4xl md:text-6xl font-black uppercase text-[#0A1628] mb-6"
+              className="text-3xl md:text-4xl font-black uppercase text-[#0A1628] mb-6"
               style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
             >
               Level Up Your Diving
@@ -157,7 +157,7 @@ export default function AdvancedPage() {
 
       {/* Course Cards */}
       <section className="pb-16 md:pb-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="px-6 md:px-12 lg:px-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course) => (
               <Link key={course.title} href={course.href} className="group">
@@ -173,7 +173,7 @@ export default function AdvancedPage() {
                     />
                   </div>
                   {/* Content */}
-                  <div className="flex flex-col flex-1 p-4 md:p-5">
+                  <div className="flex flex-col flex-1 p-4 md:p-5 text-center items-center">
                     <h2
                       className="text-base md:text-lg font-black uppercase text-[#0A1628] mb-2"
                       style={{ fontFamily: 'var(--font-space-mono)' }}
@@ -184,32 +184,31 @@ export default function AdvancedPage() {
                       {course.description}
                     </p>
                     {/* Info row */}
-                    <div className="flex items-center gap-3 text-xs font-bold text-[#0A1628]/50 mb-3">
+                    <div className="flex items-center justify-center gap-3 text-sm font-normal text-[#0A1628]/50 mb-3">
                       <div className="flex items-center gap-1.5">
-                        <svg className="h-3.5 w-3.5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="12" cy="12" r="7" />
                           <path d="M12 9v3l2 2" />
                         </svg>
                         <span>{course.duration}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <svg className="h-3.5 w-3.5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" />
                         </svg>
                         <span>{course.dives}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <svg className="h-3.5 w-3.5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="10" cy="12" r="3" />
-                          <circle cx="14" cy="11" r="3" />
+                        <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                         </svg>
                         <span>{course.price}</span>
                       </div>
                     </div>
                     {/* CTA */}
-                    <div className="flex justify-start">
+                    <div className="flex justify-center">
                       <span
-                        className="text-xs font-black uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
+                        className="text-sm font-normal uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
                         style={{ fontFamily: 'var(--font-space-mono)' }}
                       >
                         Learn More →
@@ -232,7 +231,7 @@ export default function AdvancedPage() {
       <section className="py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p
-            className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+            className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Save More
@@ -249,7 +248,7 @@ export default function AdvancedPage() {
           </p>
           <Link
             href="/packages"
-            className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+            className="text-sm font-normal uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             View Packages →

@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { GallerySection } from '@/components/home/GallerySection'
+import { MobileCarousel } from '@/components/ui/MobileCarousel'
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 
@@ -223,13 +224,6 @@ export default function Home() {
       introVisible ? 'intro-fade-visible' : ''
     }`}
   >
-    <p
-      className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-6"
-      style={{ fontFamily: 'var(--font-space-mono)' }}
-    >
-      Welcome to Hang Loose
-    </p>
-
     <h2
       className="mb-8 text-3xl md:text-5xl tracking-tight uppercase text-[#0A1628]"
       style={{ fontFamily: 'var(--font-space-mono)' }}
@@ -252,9 +246,9 @@ export default function Home() {
       <section className="bg-[#FFFAE7] py-8">
         <div
           ref={vibesRef}
-          className={`px-6 md:px-12 vibes-fade ${vibesVisible ? 'vibes-fade-visible' : ''}`}
+          className={`px-6 md:px-12 lg:px-20 vibes-fade ${vibesVisible ? 'vibes-fade-visible' : ''}`}
         >
-          <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-y-7 gap-x-12 md:gap-x-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-7 gap-x-12 md:gap-x-20">
             {/* Diving Level */}
             <div className="flex flex-col items-center text-center">
               <svg viewBox="0 0 94 22" className="h-14 w-14 md:h-16 md:w-16" aria-hidden="true">
@@ -392,16 +386,11 @@ export default function Home() {
 
       {/* Gallery */}
       <GallerySection />
-      {/* Dot Divider */}
-<div className="bg-[#FFFAE7] flex justify-center py-4">
-  <div className="h-2.5 w-2.5 rounded-full bg-[#F8B85D]" />
-</div>
-
       {/* Top Courses */}
       <section className="bg-[#FFFAE7] pt-14 pb-14">
-        <div className="mx-auto max-w-5xl px-6 text-center">
+        <div className="px-6 md:px-12 lg:px-20 text-center">
           <p
-            className="text-xs font-semibold tracking-[0.2em] uppercase text-[#4D9995]"
+            className="text-sm font-normal tracking-[0.2em] uppercase text-[#4D9995]"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Featured Courses
@@ -419,13 +408,10 @@ export default function Home() {
             let Hang Loose Divers show you the best of scuba diving in Koh Tao—smooth dives, solid
             training, and nothing but Good Vibes.
           </p>
-          <div className="mx-auto mt-5 h-px w-16 bg-[#F8B85D]" />
         </div>
 
-        <div
-          ref={coursesRef}
-          className="mx-auto mt-12 max-w-6xl px-6 flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-hide"
-        >
+        <div ref={coursesRef} className="mt-12 px-6 md:px-12 lg:px-20">
+        <MobileCarousel count={3} desktopCols={3}>
           {/* Card 1 – Try Scuba Diving */}
           <div
             className={`snap-center shrink-0 w-[80vw] md:w-auto flex flex-col h-full rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
@@ -444,8 +430,8 @@ export default function Home() {
 
             <div className="flex flex-col flex-1 p-5 md:p-6">
               <h3
-                className="mt-2 text-xl md:text-2xl font-black uppercase text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 900 }}
+                className="mt-2 text-xl md:text-2xl uppercase text-[#0A1628]"
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
               >
                 Try Scuba Diving
               </h3>
@@ -456,10 +442,10 @@ export default function Home() {
               </p>
 
               <div className="mt-auto space-y-3">
-                <div className="flex items-center justify-between text-[11px] font-medium text-black">
+                <div className="flex items-center justify-between text-xs font-medium text-black">
                   <div className="flex items-center gap-2 whitespace-nowrap">
                     <svg
-                      className="h-4 w-4 text-[#4D9995]"
+                      className="h-6 w-6 text-[#4D9995]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -475,7 +461,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 whitespace-nowrap">
                     <svg
-                      className="h-4 w-4 text-[#4D9995]"
+                      className="h-6 w-6 text-[#4D9995]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -490,7 +476,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 whitespace-nowrap">
                     <svg
-                      className="h-4 w-4 text-[#4D9995]"
+                      className="h-6 w-6 text-[#4D9995]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -499,8 +485,7 @@ export default function Home() {
                       strokeLinejoin="round"
                       aria-hidden="true"
                     >
-                      <circle cx="10" cy="12" r="3" />
-                      <circle cx="14" cy="11" r="3" />
+                      <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                     </svg>
                     <span>3,500 THB</span>
                   </div>
@@ -509,7 +494,7 @@ export default function Home() {
                 <div className="flex justify-start">
                   <Link
                     href="/courses/beginners/try-scuba"
-                    className="inline-flex border-none bg-transparent text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-6 py-3"
+                    className="inline-flex border-none bg-transparent text-sm font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-0 py-3"
                     style={{ fontFamily: 'var(--font-space-mono)' }}
                   >
                     Learn More
@@ -537,8 +522,8 @@ export default function Home() {
 
             <div className="flex flex-col flex-1 p-5 md:p-6">
               <h3
-                className="mt-2 text-xl md:text-2xl font-black uppercase text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 900 }}
+                className="mt-2 text-xl md:text-2xl uppercase text-[#0A1628]"
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
               >
                 Open Water Diver
               </h3>
@@ -548,10 +533,10 @@ export default function Home() {
               </p>
 
               <div className="mt-auto space-y-3">
-                <div className="flex items-center justify-between text-[11px] font-medium text-black">
+                <div className="flex items-center justify-between text-xs font-medium text-black">
                   <div className="flex items-center gap-2 whitespace-nowrap">
                     <svg
-                      className="h-4 w-4 text-[#4D9995]"
+                      className="h-6 w-6 text-[#4D9995]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -567,7 +552,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 whitespace-nowrap">
                     <svg
-                      className="h-4 w-4 text-[#4D9995]"
+                      className="h-6 w-6 text-[#4D9995]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -582,7 +567,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 whitespace-nowrap">
                     <svg
-                      className="h-4 w-4 text-[#4D9995]"
+                      className="h-6 w-6 text-[#4D9995]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -591,8 +576,7 @@ export default function Home() {
                       strokeLinejoin="round"
                       aria-hidden="true"
                     >
-                      <circle cx="10" cy="12" r="3" />
-                      <circle cx="14" cy="11" r="3" />
+                      <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                     </svg>
                     <span>9,900 THB</span>
                   </div>
@@ -601,7 +585,7 @@ export default function Home() {
                 <div className="flex justify-start">
                   <Link
                     href="/courses/beginners/open-water"
-                    className="inline-flex border-none bg-transparent text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-6 py-3"
+                    className="inline-flex border-none bg-transparent text-sm font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-0 py-3"
                     style={{ fontFamily: 'var(--font-space-mono)' }}
                   >
                     Learn More
@@ -629,8 +613,8 @@ export default function Home() {
 
             <div className="flex flex-col flex-1 p-5 md:p-6">
               <h3
-                className="mt-2 text-xl md:text-2xl font-black uppercase text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 900 }}
+                className="mt-2 text-xl md:text-2xl uppercase text-[#0A1628]"
+                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
               >
                 Advanced Open Water Diver
               </h3>
@@ -641,10 +625,10 @@ export default function Home() {
               </p>
 
               <div className="mt-auto space-y-3">
-                <div className="flex items-center justify-between text-[11px] font-medium text-black">
+                <div className="flex items-center justify-between text-xs font-medium text-black">
                   <div className="flex items-center gap-2 whitespace-nowrap">
                     <svg
-                      className="h-4 w-4 text-[#4D9995]"
+                      className="h-6 w-6 text-[#4D9995]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -660,7 +644,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 whitespace-nowrap">
                     <svg
-                      className="h-4 w-4 text-[#4D9995]"
+                      className="h-6 w-6 text-[#4D9995]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -675,7 +659,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 whitespace-nowrap">
                     <svg
-                      className="h-4 w-4 text-[#4D9995]"
+                      className="h-6 w-6 text-[#4D9995]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -684,8 +668,7 @@ export default function Home() {
                       strokeLinejoin="round"
                       aria-hidden="true"
                     >
-                      <circle cx="10" cy="12" r="3" />
-                      <circle cx="14" cy="11" r="3" />
+                      <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                     </svg>
                     <span>9,500 THB</span>
                   </div>
@@ -694,7 +677,7 @@ export default function Home() {
                 <div className="flex justify-start">
                   <Link
                     href="/courses/advanced/advanced-open-water"
-                    className="inline-flex border-none bg-transparent text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-6 py-3"
+                    className="inline-flex border-none bg-transparent text-sm font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-0 py-3"
                     style={{ fontFamily: 'var(--font-space-mono)' }}
                   >
                     Learn More
@@ -703,19 +686,14 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </MobileCarousel>
         </div>
 
         {/* Bottom CTA */}
-        <div className="mx-auto mt-16 max-w-3xl px-6 text-center">
-          <p
-            className="text-2xl font-normal uppercase text-[#0A1628]"
-            style={{ fontFamily: 'var(--font-space-mono)' }}
-          >
-            Find the Right Program for You
-          </p>
+        <div className="mt-12 px-6 md:px-12 lg:px-20 text-center">
           <Link
             href="/courses"
-            className="mt-4 inline-flex border-none bg-transparent px-8 py-4 text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4"
+            className="inline-flex border-none bg-transparent px-0 py-2 text-sm font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Explore All Courses
@@ -723,120 +701,105 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Dot Divider */}
-      <div className="bg-[#FFFAE7] flex justify-center py-4">
-        <div className="h-2.5 w-2.5 rounded-full bg-[#F8B85D]" />
-      </div>
-
-      {/* Who We Are */}
+      {/* Who We Are + How We Work */}
       <section className="bg-[#FFFAE7] py-12 md:py-16">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Image */}
-            <div className="relative aspect-[5/4] overflow-hidden rounded-2xl">
-              <Image
-                src="/gallery/photo1.webp"
-                alt="Hang Loose Divers team on Koh Tao"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+        <div className="px-6 md:px-12 lg:px-20">
+          <div className="flex flex-col gap-10">
+
+            {/* Who We Are */}
+            <div className="bg-[#F0EBD8] rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px]">
+                <Image
+                  src="/gallery/photo1.webp"
+                  alt="Hang Loose Divers team on Koh Tao"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-8 md:p-12">
+                <p
+                  className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+                  style={{ fontFamily: 'var(--font-space-mono)' }}
+                >
+                  Who We Are
+                </p>
+                <h2
+                  className="text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628] mb-6"
+                  style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
+                >
+                  By the Ocean Lies the Home of Good Vibes
+                </h2>
+                <p className="text-base md:text-lg text-black leading-relaxed mb-8">
+                  We believe diving is more than a hobby – it&apos;s a lifestyle – and we want
+                  you to immerse yourself in it at one of the most stunning diving destinations
+                  across the planet. And in the end, we want to leave you with not only the best
+                  diving experience, but also memories for life, new friends and a feeling
+                  that this adventure should never end.
+                </p>
+                <Link
+                  href="/about/who-we-are"
+                  className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
+                  style={{ fontFamily: 'var(--font-space-mono)' }}
+                >
+                  More About Who We Are →
+                </Link>
+              </div>
             </div>
 
-            {/* Text */}
-            <div className="flex flex-col justify-center">
-              <p
-                className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-4"
-                style={{ fontFamily: 'var(--font-space-mono)' }}
-              >
-                Who We Are
-              </p>
-              <h2
-                className="text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628] mb-6"
-                style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
-              >
-                By the Ocean Lies the Home of Good Vibes
-              </h2>
-              <p className="text-base md:text-lg text-black leading-relaxed mb-8">
-                We believe diving is more than a hobby – it&apos;s a lifestyle – and we want
-                you to immerse yourself in it at one of the most stunning diving destinations
-                across the planet. And in the end, we want to leave you with not only the best
-                diving experience, but also memories for life, new friends and a feeling
-                that this adventure should never end.
-              </p>
-              <Link
-                href="/about/who-we-are"
-                className="text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-8 py-4"
-                style={{ fontFamily: 'var(--font-space-mono)' }}
-              >
-                More About Who We Are →
-              </Link>
+            {/* How We Work */}
+            <div className="bg-[#F0EBD8] rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+              <div className="flex flex-col justify-center p-8 md:p-12 order-2 lg:order-1">
+                <p
+                  className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+                  style={{ fontFamily: 'var(--font-space-mono)' }}
+                >
+                  How We Work
+                </p>
+                <h2
+                  className="text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628] mb-6"
+                  style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
+                >
+                  The Hang Loose Way
+                </h2>
+                <p className="text-base md:text-lg text-black leading-relaxed mb-8">
+                  At Hang Loose Divers, we keep things flowing the way a great dive day
+                  should—easy starts, smooth runs, and zero unnecessary stress. Everything
+                  is set up to let you focus on the ocean, the experience, and the people
+                  you&apos;re sharing it with. From the first step onto the sand to the last
+                  sunset of the day, this is diving done with intention, rhythm, and good
+                  vibes only.
+                </p>
+                <Link
+                  href="/about/how-we-work"
+                  className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
+                  style={{ fontFamily: 'var(--font-space-mono)' }}
+                >
+                  More About How We Work →
+                </Link>
+              </div>
+              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px] order-1 lg:order-2">
+                <Image
+                  src="/gallery/photo4.webp"
+                  alt="Diving the Hang Loose way"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </div>
+
           </div>
         </div>
       </section>
-
-      {/* How We Work */}
-      <section className="bg-[#FFFAE7] py-12 md:py-16">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Text — LEFT side */}
-            <div className="flex flex-col justify-center order-2 lg:order-1">
-              <p
-                className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-4"
-                style={{ fontFamily: 'var(--font-space-mono)' }}
-              >
-                How We Work
-              </p>
-              <h2
-                className="text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628] mb-6"
-                style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
-              >
-                The Hang Loose Way
-              </h2>
-              <p className="text-base md:text-lg text-black leading-relaxed mb-8">
-                At Hang Loose Divers, we keep things flowing the way a great dive day
-                should—easy starts, smooth runs, and zero unnecessary stress. Everything
-                is set up to let you focus on the ocean, the experience, and the people
-                you&apos;re sharing it with. From the first step onto the sand to the last
-                sunset of the day, this is diving done with intention, rhythm, and good
-                vibes only.
-              </p>
-              <Link
-                href="/about/how-we-work"
-                className="text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-8 py-4"
-                style={{ fontFamily: 'var(--font-space-mono)' }}
-              >
-                More About How We Work →
-              </Link>
-            </div>
-
-            {/* Image — RIGHT side */}
-            <div className="relative aspect-[5/4] overflow-hidden rounded-2xl order-1 lg:order-2">
-              <Image
-                src="/gallery/photo4.webp"
-                alt="Diving the Hang Loose way"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Dot Divider */}
-      <div className="bg-[#FFFAE7] flex justify-center py-8">
-        <div className="h-2.5 w-2.5 rounded-full bg-[#F8B85D]" />
-      </div>
 
       {/* Google Reviews Carousel */}
       <section className="bg-[#FFFAE7] py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="px-6 md:px-12 lg:px-20">
           {/* Header */}
           <div className="text-center mb-12">
             <p
-              className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+              className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Reviews
@@ -983,7 +946,7 @@ export default function Home() {
               href={googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-8 py-4"
+              className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Read All Reviews on Google →
@@ -992,18 +955,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Dot Divider */}
-      <div className="bg-[#FFFAE7] flex justify-center py-8">
-        <div className="h-2.5 w-2.5 rounded-full bg-[#F8B85D]" />
-      </div>
-
       {/* FAQ */}
       <section className="bg-[#FFFAE7] py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 md:px-12">
+        <div className="max-w-3xl mx-auto px-6 md:px-12 lg:px-20">
           {/* Header */}
           <div className="text-center mb-12">
             <p
-              className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+              className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               FAQ
@@ -1014,6 +972,9 @@ export default function Home() {
             >
               Got Questions?
             </h2>
+            <div className="flex justify-center mt-6">
+              <div className="h-2.5 w-2.5 rounded-full bg-[#F8B85D]" />
+            </div>
           </div>
 
           {/* Accordion */}
@@ -1025,7 +986,7 @@ export default function Home() {
                   className="w-full py-6 flex items-center justify-between text-left group"
                 >
                   <span
-                    className="text-sm md:text-base font-bold tracking-wider text-[#0A1628] pr-8 group-hover:text-[#4D9995] transition-colors"
+                    className="text-sm md:text-base font-bold tracking-wider text-[#0A1628] pr-8 group-hover:text-[#97ABB1] transition-colors"
                     style={{ fontFamily: 'var(--font-space-mono)' }}
                   >
                     {faq.question}
@@ -1064,7 +1025,7 @@ export default function Home() {
             <p className="text-sm text-[#97ABB1] mb-4">Still have questions?</p>
             <Link
               href="/contact"
-              className="text-lg md:text-xl font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-8 py-4"
+              className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Get in Touch →

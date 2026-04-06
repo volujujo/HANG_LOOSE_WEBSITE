@@ -1,15 +1,15 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import EgyptRouteMap from '@/components/liveaboard/EgyptRouteMap'
 
 function Accordion({ title, children, defaultOpen = false }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(defaultOpen)
   return (
     <div className="border-b border-[#0A1628]/10">
       <button onClick={() => setOpen(!open)} className="w-full py-4 flex items-center justify-between text-left group">
-        <span className="text-sm md:text-base font-bold uppercase tracking-wider text-[#0A1628] group-hover:text-[#4D9995] transition-colors" style={{ fontFamily: 'var(--font-space-mono)' }}>
+        <span className="text-sm md:text-base font-bold uppercase tracking-wider text-[#0A1628] group-hover:text-[#97ABB1] transition-colors" style={{ fontFamily: 'var(--font-space-mono)' }}>
           {title}
         </span>
         <span className={`flex-shrink-0 w-6 h-6 flex items-center justify-center text-[#F8B85D] transition-transform duration-300 ${open ? 'rotate-45' : ''}`}>
@@ -80,10 +80,43 @@ export default function EgyptLiveaboardPage() {
         </div>
       </section>
 
-      {/* Dive Route Map */}
-      <section className="py-6 md:py-8">
-        <div className="max-w-3xl mx-auto px-6 md:px-12">
-          <EgyptRouteMap />
+      {/* Photo Grid */}
+      <section className="py-6 md:py-8 px-6 md:px-12 lg:px-20">
+        {/* Mobile */}
+        <div className="md:hidden flex flex-col gap-3">
+          <div className="relative overflow-hidden rounded-2xl aspect-[8/5]">
+            <Image src="/gallery/photo1.webp" alt="Egypt Red Sea liveaboard" fill className="object-cover" sizes="100vw" />
+          </div>
+          <div className="flex gap-3">
+            <div className="relative overflow-hidden rounded-2xl aspect-[3/4] flex-1">
+              <Image src="/gallery/photo2.webp" alt="Liveaboard boat" fill className="object-cover" sizes="50vw" />
+            </div>
+            <div className="flex flex-col gap-3 flex-1">
+              <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <Image src="/gallery/photo3.webp" alt="Red Sea diving" fill className="object-cover" sizes="50vw" />
+              </div>
+              <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <Image src="/gallery/photo4.webp" alt="Egypt wrecks" fill className="object-cover" sizes="50vw" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Desktop */}
+        <div className="hidden md:flex gap-4 h-[480px] lg:h-[560px]">
+          <div className="relative overflow-hidden rounded-2xl flex-[1.1] min-w-0">
+            <Image src="/gallery/photo1.webp" alt="Egypt Red Sea liveaboard" fill className="object-cover" sizes="50vw" />
+          </div>
+          <div className="relative overflow-hidden rounded-2xl flex-[0.55] min-w-0">
+            <Image src="/gallery/photo2.webp" alt="Liveaboard boat" fill className="object-cover" sizes="25vw" />
+          </div>
+          <div className="flex flex-col gap-4 flex-[0.45] min-w-0">
+            <div className="relative overflow-hidden rounded-2xl flex-1">
+              <Image src="/gallery/photo3.webp" alt="Red Sea diving" fill className="object-cover" sizes="25vw" />
+            </div>
+            <div className="relative overflow-hidden rounded-2xl flex-1">
+              <Image src="/gallery/photo4.webp" alt="Egypt wrecks" fill className="object-cover" sizes="25vw" />
+            </div>
+          </div>
         </div>
       </section>
 

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-export default function TryScubaPage() {
+export default function WreckPenetrationPage() {
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [
@@ -13,11 +13,12 @@ export default function TryScubaPage() {
       content: (
         <div className="space-y-2.5">
           {[
-            "A fun and hands-on theory session",
-            "2 open water dives at some of Koh Tao's top dive sites",
-            "Supportive, expert SSI instructors who make learning easy and enjoyable",
-            "Small-group training with a maximum of four divers per group",
-            "Top-quality scuba equipment",
+            "In-depth theory sessions covering detailed dive planning, overhead procedures, and safety practices",
+            "Confined water training to practice stable buoyancy, precise line work, and efficient communication",
+            "Wreck penetration dives",
+            "Small-group training (maximum of three divers) for personalized attention",
+            "Premium, well-maintained scuba diving equipment for comfort and safety",
+            "SSI Advanced Wreck Diver Certification",
             "Dive insurance",
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-2.5">
@@ -35,7 +36,9 @@ export default function TryScubaPage() {
       content: (
         <div className="space-y-2.5">
           {[
-            "Be 10 years old or more",
+            "Be 15 years old or more",
+            "Be a certified Advanced Open Water Diver",
+            "Have at least 12 logged dives",
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-2.5">
               <svg className="w-4 h-4 text-[#F8B85D] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -50,10 +53,19 @@ export default function TryScubaPage() {
     {
       title: "Schedule",
       content: (
-        <div className="space-y-2 text-sm text-[#0A1628]/60 leading-relaxed">
-          <p>We start at 10am with an introductory theory session of approximately 60 minutes. After a short break we head to our amazing diving boat.</p>
-          <p>We&apos;ll do two dives at different dive sites, both reaching a maximum depth of 12 metres, and practice some basic diving skills along the way.</p>
-          <p>We finish at around 4:30pm. Back at Hang Loose you will receive your Basic Diver Recognition Card.</p>
+        <div className="space-y-3 text-sm text-[#0A1628]/60 leading-relaxed">
+          <div>
+            <p className="font-bold text-[#0A1628] mb-1">Day 1</p>
+            <p>Theory session and dry land session to practice and develop key wreck-diving skills, from precise guideline work to light control and team communication.</p>
+          </div>
+          <div>
+            <p className="font-bold text-[#0A1628] mb-1">Day 2</p>
+            <p>We start at 9:00am with an in-depth wreck diving theory session, focusing on dive planning, specialized equipment, and emergency procedures. Around noon, we head out on the boat to practice essential skills such as guideline handling, light management, and buoyancy control in confined water. You&apos;ll then apply these skills during an open water dive exploring the exterior of the wreck.</p>
+          </div>
+          <div>
+            <p className="font-bold text-[#0A1628] mb-1">Day 3</p>
+            <p>Morning dives to put your training to the test with guided wreck penetration dives at the spectacular Koh Tao wrecks. Using the techniques developed earlier, you&apos;ll focus on safe navigation, team coordination, and confident decision-making inside the wreck.</p>
+          </div>
         </div>
       ),
     },
@@ -61,69 +73,59 @@ export default function TryScubaPage() {
 
   return (
     <main className="bg-[#FFFAE7]">
-      {/* Hero */}
       <section className="pt-32 pb-8 md:pt-36 md:pb-10">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-6">
             <Link href="/courses" className="text-xs font-bold uppercase tracking-wider text-[#97ABB1] hover:text-[#F8B85D] transition-colors" style={{ fontFamily: 'var(--font-space-mono)' }}>
               Courses
             </Link>
             <span className="text-[#97ABB1]">/</span>
-            <Link href="/courses/beginners" className="text-xs font-bold uppercase tracking-wider text-[#97ABB1] hover:text-[#F8B85D] transition-colors" style={{ fontFamily: 'var(--font-space-mono)' }}>
-              Beginners
+            <Link href="/courses/advanced" className="text-xs font-bold uppercase tracking-wider text-[#97ABB1] hover:text-[#F8B85D] transition-colors" style={{ fontFamily: 'var(--font-space-mono)' }}>
+              Advanced
             </Link>
             <span className="text-[#97ABB1]">/</span>
             <span className="text-xs font-bold uppercase tracking-wider text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>
-              Try Scuba
+              Wreck Penetration
             </span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            {/* Left: Text */}
             <div>
               <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-2" style={{ fontFamily: 'var(--font-space-mono)' }}>
-                Beginner Program
+                Advanced &amp; Specialties
               </p>
               <h1 className="text-3xl md:text-5xl font-black uppercase text-[#0A1628] mb-4" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
-                Try Scuba Diving
+                Wreck Penetration
               </h1>
 
-              {/* Quick Stats */}
               <div className="flex items-center gap-6 mb-5">
                 <div className="flex items-center gap-1.5">
                   <svg className="h-6 w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" />
                   </svg>
-                  <span className="text-base font-bold text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>1 Day</span>
+                  <span className="text-base font-bold text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>3 Days</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <svg className="h-6 w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" />
                   </svg>
-                  <span className="text-base font-bold text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>2 Dives</span>
+                  <span className="text-base font-bold text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>4 Dives</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <svg className="h-6 w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                   </svg>
-                  <span className="text-base font-bold text-[#F8B85D]" style={{ fontFamily: 'var(--font-space-mono)' }}>3,500 THB</span>
+                  <span className="text-base font-bold text-[#F8B85D]" style={{ fontFamily: 'var(--font-space-mono)' }}>10,000 THB</span>
                 </div>
               </div>
 
               <p className="text-sm md:text-base text-[#0A1628]/60 leading-relaxed">
-                Discover scuba diving in Koh Tao, one of Thailand&apos;s top dive destinations,
-                with Hang Loose Divers. With a calm, professional approach and a deep connection
-                to the ocean, we offer an easy and welcoming way to take your first breath underwater.
-                You&apos;ll dive to a maximum depth of 12 metres, in small groups of no more
-                than four divers per instructor. No pressure, no rush — just an unforgettable first
-                step into the underwater world.
+                The Advanced Wreck Diving course is designed for certified divers ready to move beyond external exploration and experience the thrill of wreck penetration. This course focuses on developing the awareness, control, and technical skills required to safely navigate overhead environments. You&apos;ll explore renowned wrecks such as the HTMS Sattakut and HTMS Suphairin, gaining real-world experience on some of Koh Tao&apos;s most impressive dive sites.
               </p>
 
-              {/* Book Now CTA */}
               <div className="mt-6">
                 <a
-                  href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20the%20Try%20Scuba%20course%20🤿"
+                  href="https://wa.me/66971543171?text=Hi!%20I%27m%20interested%20in%20the%20Wreck%20Penetration%20course%20%F0%9F%A4%BF"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
@@ -134,11 +136,10 @@ export default function TryScubaPage() {
               </div>
             </div>
 
-            {/* Right: Image */}
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image
                 src="/gallery/photo1.webp"
-                alt="Try Scuba Diving in Koh Tao"
+                alt="Wreck Penetration Course in Koh Tao"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -149,7 +150,6 @@ export default function TryScubaPage() {
         </div>
       </section>
 
-      {/* Tab Details */}
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-3 gap-2 mb-6">
@@ -174,21 +174,17 @@ export default function TryScubaPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
       <section className="py-10 md:py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2
-            className="text-xl md:text-3xl font-black uppercase text-[#0A1628] mb-3"
-            style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
-          >
-            Ready to Take the Plunge?
+          <h2 className="text-xl md:text-3xl font-black uppercase text-[#0A1628] mb-3" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
+            Explore What Lies Within
           </h2>
           <p className="text-sm text-[#0A1628]/60 leading-relaxed mb-6">
-            No experience needed — just bring your curiosity and good vibes.
+            The HTMS Sattakut is waiting — and so is the adventure.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <a
-              href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20the%20Try%20Scuba%20course%20🤿"
+              href="https://wa.me/66971543171?text=Hi!%20I%27m%20interested%20in%20the%20Wreck%20Penetration%20course%20%F0%9F%A4%BF"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
@@ -197,11 +193,11 @@ export default function TryScubaPage() {
               Book Now →
             </a>
             <Link
-              href="/courses/beginners"
+              href="/courses/advanced"
               className="text-sm font-black uppercase tracking-wider text-[#4D9995] hover:underline underline-offset-4 transition-all duration-300"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
-              ← Back to Beginners
+              ← Back to Advanced
             </Link>
           </div>
         </div>
@@ -209,5 +205,3 @@ export default function TryScubaPage() {
     </main>
   )
 }
-
-

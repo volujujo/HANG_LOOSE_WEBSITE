@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-export default function TryScubaPage() {
+export default function RefreshProgramPage() {
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [
@@ -13,11 +13,11 @@ export default function TryScubaPage() {
       content: (
         <div className="space-y-2.5">
           {[
-            "A fun and hands-on theory session",
-            "2 open water dives at some of Koh Tao's top dive sites",
-            "Supportive, expert SSI instructors who make learning easy and enjoyable",
-            "Small-group training with a maximum of four divers per group",
-            "Top-quality scuba equipment",
+            "Theory session to refresh all the basics to safely scuba dive",
+            "Skills training in a confined water environment",
+            "2 open water dives",
+            "Small-group training (maximum of four divers) for personalized attention",
+            "Premium, well-maintained scuba diving equipment for comfort and safety",
             "Dive insurance",
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-2.5">
@@ -35,7 +35,7 @@ export default function TryScubaPage() {
       content: (
         <div className="space-y-2.5">
           {[
-            "Be 10 years old or more",
+            "Be a certified Open Water Diver",
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-2.5">
               <svg className="w-4 h-4 text-[#F8B85D] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -51,9 +51,8 @@ export default function TryScubaPage() {
       title: "Schedule",
       content: (
         <div className="space-y-2 text-sm text-[#0A1628]/60 leading-relaxed">
-          <p>We start at 10am with an introductory theory session of approximately 60 minutes. After a short break we head to our amazing diving boat.</p>
-          <p>We&apos;ll do two dives at different dive sites, both reaching a maximum depth of 12 metres, and practice some basic diving skills along the way.</p>
-          <p>We finish at around 4:30pm. Back at Hang Loose you will receive your Basic Diver Recognition Card.</p>
+          <p>We start at 10:00am with a refresher theory session of approximately 60 minutes. After a short break, we head to our amazing boat for some skills review and two open water dives at different dive sites.</p>
+          <p>We&apos;ll be back at Hang Loose at around 4:30pm, with your confidence restored and your diving spark fully reignited.</p>
         </div>
       ),
     },
@@ -61,35 +60,27 @@ export default function TryScubaPage() {
 
   return (
     <main className="bg-[#FFFAE7]">
-      {/* Hero */}
       <section className="pt-32 pb-8 md:pt-36 md:pb-10">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-6">
-            <Link href="/courses" className="text-xs font-bold uppercase tracking-wider text-[#97ABB1] hover:text-[#F8B85D] transition-colors" style={{ fontFamily: 'var(--font-space-mono)' }}>
-              Courses
-            </Link>
-            <span className="text-[#97ABB1]">/</span>
-            <Link href="/courses/beginners" className="text-xs font-bold uppercase tracking-wider text-[#97ABB1] hover:text-[#F8B85D] transition-colors" style={{ fontFamily: 'var(--font-space-mono)' }}>
-              Beginners
+            <Link href="/fun-dives" className="text-xs font-bold uppercase tracking-wider text-[#97ABB1] hover:text-[#F8B85D] transition-colors" style={{ fontFamily: 'var(--font-space-mono)' }}>
+              Fun Dives
             </Link>
             <span className="text-[#97ABB1]">/</span>
             <span className="text-xs font-bold uppercase tracking-wider text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>
-              Try Scuba
+              Refresh Program
             </span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            {/* Left: Text */}
             <div>
               <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-2" style={{ fontFamily: 'var(--font-space-mono)' }}>
-                Beginner Program
+                Fun Diving
               </p>
               <h1 className="text-3xl md:text-5xl font-black uppercase text-[#0A1628] mb-4" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
-                Try Scuba Diving
+                Refresh Program
               </h1>
 
-              {/* Quick Stats */}
               <div className="flex items-center gap-6 mb-5">
                 <div className="flex items-center gap-1.5">
                   <svg className="h-6 w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -107,23 +98,17 @@ export default function TryScubaPage() {
                   <svg className="h-6 w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                   </svg>
-                  <span className="text-base font-bold text-[#F8B85D]" style={{ fontFamily: 'var(--font-space-mono)' }}>3,500 THB</span>
+                  <span className="text-base font-bold text-[#F8B85D]" style={{ fontFamily: 'var(--font-space-mono)' }}>2,500 THB</span>
                 </div>
               </div>
 
               <p className="text-sm md:text-base text-[#0A1628]/60 leading-relaxed">
-                Discover scuba diving in Koh Tao, one of Thailand&apos;s top dive destinations,
-                with Hang Loose Divers. With a calm, professional approach and a deep connection
-                to the ocean, we offer an easy and welcoming way to take your first breath underwater.
-                You&apos;ll dive to a maximum depth of 12 metres, in small groups of no more
-                than four divers per instructor. No pressure, no rush — just an unforgettable first
-                step into the underwater world.
+                Haven&apos;t dived in a while and want to feel confident underwater again? Our Scuba Refresher Program is the perfect way to ease back into diving in a relaxed, supportive environment. We&apos;ll revisit essential diving knowledge and key skills at a comfortable pace, helping you regain confidence and fine-tune your technique. You&apos;ll dive in small groups of no more than four divers per instructor — personal, easy-going, and unrushed.
               </p>
 
-              {/* Book Now CTA */}
               <div className="mt-6">
                 <a
-                  href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20the%20Try%20Scuba%20course%20🤿"
+                  href="https://wa.me/66971543171?text=Hi!%20I%27m%20interested%20in%20the%20Refresh%20Program%20%F0%9F%A4%BF"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
@@ -134,11 +119,10 @@ export default function TryScubaPage() {
               </div>
             </div>
 
-            {/* Right: Image */}
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image
                 src="/gallery/photo1.webp"
-                alt="Try Scuba Diving in Koh Tao"
+                alt="Scuba Refresh Program in Koh Tao"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -149,7 +133,6 @@ export default function TryScubaPage() {
         </div>
       </section>
 
-      {/* Tab Details */}
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-3 gap-2 mb-6">
@@ -174,21 +157,17 @@ export default function TryScubaPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
       <section className="py-10 md:py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2
-            className="text-xl md:text-3xl font-black uppercase text-[#0A1628] mb-3"
-            style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
-          >
-            Ready to Take the Plunge?
+          <h2 className="text-xl md:text-3xl font-black uppercase text-[#0A1628] mb-3" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
+            Ready to Get Back in the Water?
           </h2>
           <p className="text-sm text-[#0A1628]/60 leading-relaxed mb-6">
-            No experience needed — just bring your curiosity and good vibes.
+            Your diving spark is still there — let&apos;s reignite it.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <a
-              href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20the%20Try%20Scuba%20course%20🤿"
+              href="https://wa.me/66971543171?text=Hi!%20I%27m%20interested%20in%20the%20Refresh%20Program%20%F0%9F%A4%BF"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
@@ -197,11 +176,11 @@ export default function TryScubaPage() {
               Book Now →
             </a>
             <Link
-              href="/courses/beginners"
+              href="/fun-dives"
               className="text-sm font-black uppercase tracking-wider text-[#4D9995] hover:underline underline-offset-4 transition-all duration-300"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
-              ← Back to Beginners
+              ← Back to Fun Dives
             </Link>
           </div>
         </div>
@@ -209,5 +188,3 @@ export default function TryScubaPage() {
     </main>
   )
 }
-
-

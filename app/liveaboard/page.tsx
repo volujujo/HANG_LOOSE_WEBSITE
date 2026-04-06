@@ -46,8 +46,8 @@ export default function LiveaboardPage() {
       </section>
 
       {/* Trip Cards */}
-      <section className="pb-16 md:pb-24 bg-gradient-to-b from-[#0A1628] via-[#0A1628] to-[#FFFAE7]">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
+      <section className="pb-16 md:pb-24">
+        <div className="px-6 md:px-12 lg:px-20">
           <div className="mb-8 text-center text-xs font-bold uppercase tracking-[0.25em] text-[#F8B85D]" style={{ fontFamily: 'var(--font-space-mono)' }}>
             Hosted Small-Group Expeditions
           </div>
@@ -76,7 +76,7 @@ export default function LiveaboardPage() {
                       <h2 className="text-2xl md:text-3xl font-black uppercase text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>
                         {trip.title}
                       </h2>
-                      <span className="text-[11px] font-bold uppercase text-[#4D9995]" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                      <span className="text-[11px] font-bold uppercase text-[#97ABB1]" style={{ fontFamily: 'var(--font-space-mono)' }}>
                         Hosted by Hang Loose
                       </span>
                     </div>
@@ -86,11 +86,11 @@ export default function LiveaboardPage() {
                     <div className="flex items-center justify-between text-xs font-bold text-[#0A1628]/60 mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
                       <div className="flex items-center gap-3">
                         <span className="inline-flex items-center gap-1.5">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#4D9995]" />
+                          <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#97ABB1]" />
                           {trip.dives}
                         </span>
                         <span className="inline-flex items-center gap-1.5">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#4D9995]" />
+                          <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#97ABB1]" />
                           Small Group
                         </span>
                       </div>

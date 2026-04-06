@@ -1,90 +1,71 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const courses = [
+const options = [
   {
-    title: 'Divemaster',
-    href: '/courses/professionals/divemaster',
-    image: '/gallery/photo4.webp',
-    duration: '6 Weeks',
-    dives: '60+ Dives',
-    price: '42,000 THB',
-    description: "Our Divemaster Program is the foundation of a professional dive career, transforming experienced divers into capable leaders who guide dives with confidence, awareness, and responsibility.",
+    title: 'Fun Dives',
+    href: '/fun-dives/fun-dives',
+    image: '/gallery/photo2.webp',
+    duration: '1 Day',
+    dives: '2 Dives',
+    price: '2,200 THB',
+    description: "Dive into Koh Tao's most iconic reefs, pinnacles, wrecks, and night dives with Hang Loose Divers — where world-class diving meets laid-back island vibes. Small groups, expert guides, and unforgettable underwater encounters.",
   },
   {
-    title: 'Open Water Instructor',
-    href: '/courses/professionals/open-water-instructor',
-    image: '/gallery/photo3.webp',
-    duration: '16 Days',
-    dives: 'Multiple',
-    price: '82,000 THB',
-    description: "Designed to train Open Water Instructors ready to step into teaching with confidence, purpose, and the skills to deliver high-quality training at every level.",
+    title: 'Refresh Program',
+    href: '/fun-dives/refresh-program',
+    image: '/gallery/photo1.webp',
+    duration: '1 Day',
+    dives: '2 Dives',
+    price: '2,500 THB',
+    description: "The Scuba Refresher is designed for certified divers who want a quick confidence boost before getting back into the ocean. Minimal theory, plenty of in-water practice, and 2 guided fun dives in calm, tropical conditions.",
   },
 ]
 
-export default function ProfessionalsPage() {
+export default function FunDivesPage() {
   return (
     <main className="bg-[#FFFAE7]">
       {/* Hero */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-8">
-            <Link
-              href="/courses"
-              className="text-xs font-bold uppercase tracking-wider text-[#97ABB1] hover:text-[#F8B85D] transition-colors"
-              style={{ fontFamily: 'var(--font-space-mono)' }}
-            >
-              Courses
-            </Link>
-            <span className="text-[#97ABB1]">/</span>
-            <span
-              className="text-xs font-bold uppercase tracking-wider text-[#0A1628]"
-              style={{ fontFamily: 'var(--font-space-mono)' }}
-            >
-              Professionals
-            </span>
-          </div>
-
           <div className="max-w-3xl mx-auto text-center">
             <p
               className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
-              Professional Programs
+              Certified Divers
             </p>
             <h1
               className="text-3xl md:text-4xl font-black uppercase text-[#0A1628] mb-6"
               style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
             >
-              Turn Your Passion Into a Career
+              Jump In. Let&apos;s Dive.
             </h1>
             <p className="text-lg text-[#0A1628]/60 leading-relaxed">
-              The professional programs at Hang Loose Divers are where passion turns into
-              purpose. This is for divers who want more than just a card—who want confidence,
-              credibility, and real-world skills to lead dives and teach with impact. From
-              Divemaster to Instructor, our training is hands-on, high-standard, and fully
-              dialed in, shaping professionals who move smooth, think sharp, and represent
-              the ocean the right way. Ready to level up and live the dive life for real?
+              Certified and ready to go? Our daily fun dive trips take you to Koh Tao&apos;s
+              best sites — vibrant reefs, dramatic pinnacles, legendary wrecks, and night
+              dives for those who can&apos;t stop. Small groups, expert guides, and serious
+              good times. If it&apos;s been a while, our Refresh Program gets you back in the
+              water with confidence.
             </p>
           </div>
 
-          <div className="mt-8 h-2 w-2 rounded-full bg-[#F8B85D]" />
+          <div className="mt-8 h-2 w-2 rounded-full bg-[#F8B85D] mx-auto" />
         </div>
       </section>
 
-      {/* Course Cards */}
+      {/* Cards */}
       <section className="pb-16 md:pb-24">
         <div className="px-6 md:px-12 lg:px-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {courses.map((course) => (
-              <Link key={course.title} href={course.href} className="group">
+            {options.map((item) => (
+              <Link key={item.title} href={item.href} className="group">
                 <div className="flex flex-col h-full bg-[#F0EBD8] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                   {/* Image */}
                   <div className="relative w-full aspect-[16/10]">
                     <Image
-                      src={course.image}
-                      alt={course.title}
+                      src={item.image}
+                      alt={item.title}
                       fill
                       className="object-cover transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -96,10 +77,10 @@ export default function ProfessionalsPage() {
                       className="text-2xl md:text-3xl font-black uppercase text-[#0A1628] mb-3"
                       style={{ fontFamily: 'var(--font-space-mono)' }}
                     >
-                      {course.title}
+                      {item.title}
                     </h2>
                     <p className="text-sm text-[#0A1628]/60 leading-relaxed flex-1 mb-4">
-                      {course.description}
+                      {item.description}
                     </p>
                     {/* Info row */}
                     <div className="flex items-center justify-center gap-4 text-sm font-normal text-[#0A1628]/50 mb-4">
@@ -108,19 +89,19 @@ export default function ProfessionalsPage() {
                           <circle cx="12" cy="12" r="7" />
                           <path d="M12 9v3l2 2" />
                         </svg>
-                        <span>{course.duration}</span>
+                        <span>{item.duration}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
                         <svg className="h-6 w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" />
                         </svg>
-                        <span>{course.dives}</span>
+                        <span>{item.dives}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
                         <svg className="h-6 w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                         </svg>
-                        <span>{course.price}</span>
+                        <span>{item.price}</span>
                       </div>
                     </div>
                     {/* CTA */}
@@ -145,45 +126,34 @@ export default function ProfessionalsPage() {
         <div className="h-2 w-2 rounded-full bg-[#F8B85D]" />
       </div>
 
-      {/* Not Ready Yet? */}
+      {/* Bottom CTA */}
       <section className="py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p
             className="text-sm font-normal tracking-[0.25em] uppercase text-[#F8B85D] mb-4"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
-            Not There Yet?
+            Not Certified Yet?
           </p>
           <h2
             className="text-2xl md:text-4xl font-black uppercase text-[#0A1628] mb-4"
             style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
           >
-            We&apos;ll Get You There
+            Get Your Open Water First
           </h2>
           <p className="text-base text-[#0A1628]/60 leading-relaxed mb-8">
-            Don&apos;t have all the prerequisites yet? No worries — we can help you
-            get the certifications and logged dives you need to start your professional
-            journey. Talk to us and we&apos;ll build a plan together.
+            All you need is an Open Water Diver certification to join our fun dives.
+            Check out our beginner courses and get certified in just 2.5 days.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link
-              href="/courses/advanced"
-              className="text-sm font-normal uppercase tracking-wider text-[#4D9995] hover:underline underline-offset-4 transition-all duration-300"
-              style={{ fontFamily: 'var(--font-space-mono)' }}
-            >
-              Advanced Courses →
-            </Link>
-            <Link
-              href="/contact"
-              className="text-sm font-normal uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
-              style={{ fontFamily: 'var(--font-space-mono)' }}
-            >
-              Get in Touch →
-            </Link>
-          </div>
+          <Link
+            href="/courses/beginners"
+            className="text-sm font-normal uppercase tracking-wider text-[#4D9995] hover:underline underline-offset-4 transition-all duration-300"
+            style={{ fontFamily: 'var(--font-space-mono)' }}
+          >
+            Beginner Courses →
+          </Link>
         </div>
       </section>
     </main>
   )
 }
-

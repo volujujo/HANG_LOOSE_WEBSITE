@@ -5,11 +5,9 @@ const footerLinks = [
   {
     title: 'Courses',
     links: [
-      { label: 'Try Scuba', href: '/courses/beginners/try-scuba' },
-      { label: 'Open Water', href: '/courses/beginners/open-water' },
+      { label: 'Beginners', href: '/courses/beginners' },
       { label: 'Advanced', href: '/courses/advanced' },
-      { label: 'Divemaster', href: '/courses/professionals/divemaster' },
-      { label: 'Instructor', href: '/courses/professionals/open-water-instructor' },
+      { label: 'Professionals', href: '/courses/professionals' },
     ],
   },
   {

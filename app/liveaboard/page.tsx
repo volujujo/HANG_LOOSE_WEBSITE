@@ -1,3 +1,4 @@
+import { MobileCarousel } from '@/components/ui/MobileCarousel'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -30,7 +31,7 @@ export default function LiveaboardPage() {
       {/* Hero */}
       <section className="pt-32 pb-8 md:pt-40 md:pb-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
+          <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
             Once-in-a-Lifetime
           </p>
           <h1 className="text-4xl md:text-6xl font-black uppercase text-[#0A1628] mb-5" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
@@ -41,7 +42,6 @@ export default function LiveaboardPage() {
             experience — epic dive sites, premium boats, and the Hang Loose crew
             by your side for a week you&apos;ll never forget.
           </p>
-          <div className="mx-auto mt-6 h-2 w-2 rounded-full bg-[#F8B85D]" />
         </div>
       </section>
 
@@ -51,9 +51,9 @@ export default function LiveaboardPage() {
           <div className="mb-8 text-center text-xs font-bold uppercase tracking-[0.25em] text-[#F8B85D]" style={{ fontFamily: 'var(--font-space-mono)' }}>
             Hosted Small-Group Expeditions
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <MobileCarousel count={2} desktopCols={2}>
             {trips.map((trip) => (
-              <Link key={trip.title} href={trip.href} className="group">
+              <Link key={trip.title} href={trip.href} className="group snap-center shrink-0 w-[80vw] md:w-auto h-full flex flex-col">
                 <div className="flex flex-col h-full bg-[#F0EBD8] rounded-2xl overflow-hidden border border-[#0A1628]/5 shadow-[0_18px_40px_rgba(10,22,40,0.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(10,22,40,0.45)]">
                   <div className="relative w-full aspect-[16/10]">
                     <Image src={trip.image} alt={trip.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
@@ -83,7 +83,7 @@ export default function LiveaboardPage() {
                     <p className="text-sm text-[#0A1628]/60 leading-relaxed flex-1 mb-4">
                       {trip.description}
                     </p>
-                    <div className="flex items-center justify-between text-xs font-bold text-[#0A1628]/60 mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                    <div className="flex items-center justify-between text-sm font-bold text-[#0A1628]/60 mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
                       <div className="flex items-center gap-3">
                         <span className="inline-flex items-center gap-1.5">
                           <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#97ABB1]" />
@@ -94,12 +94,12 @@ export default function LiveaboardPage() {
                           Small Group
                         </span>
                       </div>
-                      <span className="text-[#F8B85D] text-[13px]">
+                      <span className="text-[#F8B85D] text-sm font-bold">
                         {trip.price}
                       </span>
                     </div>
                     <div className="flex justify-start">
-                      <span className="text-xs font-black uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                      <span className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] group-hover:underline underline-offset-4 transition-all" style={{ fontFamily: 'var(--font-space-mono)' }}>
                         View Trip Details →
                       </span>
                     </div>
@@ -107,7 +107,7 @@ export default function LiveaboardPage() {
                 </div>
               </Link>
             ))}
-          </div>
+          </MobileCarousel>
         </div>
       </section>
     </main>

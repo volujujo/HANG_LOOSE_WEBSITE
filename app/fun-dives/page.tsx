@@ -1,3 +1,4 @@
+import { MobileCarousel } from '@/components/ui/MobileCarousel'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -50,19 +51,18 @@ export default function FunDivesPage() {
             </p>
           </div>
 
-          <div className="mt-8 h-2 w-2 rounded-full bg-[#F8B85D] mx-auto" />
         </div>
       </section>
 
       {/* Cards */}
       <section className="pb-16 md:pb-24">
         <div className="px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <MobileCarousel count={2} desktopCols={2}>
             {options.map((item) => (
-              <Link key={item.title} href={item.href} className="group">
+              <Link key={item.title} href={item.href} className="group snap-center shrink-0 w-[80vw] md:w-auto h-full flex flex-col">
                 <div className="flex flex-col h-full bg-[#F0EBD8] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                   {/* Image */}
-                  <div className="relative w-full aspect-[16/10]">
+                  <div className="relative w-full aspect-[3/2]">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -79,26 +79,26 @@ export default function FunDivesPage() {
                     >
                       {item.title}
                     </h2>
-                    <p className="text-sm text-[#0A1628]/60 leading-relaxed flex-1 mb-4">
+                    <p className="text-sm text-[#0A1628]/60 leading-relaxed line-clamp-4 mb-4">
                       {item.description}
                     </p>
                     {/* Info row */}
-                    <div className="flex items-center justify-center gap-4 text-sm font-normal text-[#0A1628]/50 mb-4">
+                    <div className="flex items-center justify-center gap-2 md:gap-4 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-4 mt-auto">
                       <div className="flex items-center gap-1.5">
-                        <svg className="h-6 w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="h-5 w-5 md:h-6 md:w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="12" cy="12" r="7" />
                           <path d="M12 9v3l2 2" />
                         </svg>
                         <span>{item.duration}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <svg className="h-6 w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="h-5 w-5 md:h-6 md:w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" />
                         </svg>
                         <span>{item.dives}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <svg className="h-6 w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="h-5 w-5 md:h-6 md:w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                         </svg>
                         <span>{item.price}</span>
@@ -117,14 +117,9 @@ export default function FunDivesPage() {
                 </div>
               </Link>
             ))}
-          </div>
+          </MobileCarousel>
         </div>
       </section>
-
-      {/* Dot Divider */}
-      <div className="flex justify-center py-4">
-        <div className="h-2 w-2 rounded-full bg-[#F8B85D]" />
-      </div>
 
       {/* Bottom CTA */}
       <section className="py-16 md:py-20">

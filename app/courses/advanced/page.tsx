@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { MobileCarousel } from '@/components/ui/MobileCarousel'
 
 const courses = [
   {
@@ -151,16 +152,15 @@ export default function AdvancedPage() {
             </p>
           </div>
 
-          <div className="mt-8 h-2 w-2 rounded-full bg-[#F8B85D]" />
         </div>
       </section>
 
       {/* Course Cards */}
       <section className="pb-16 md:pb-24">
         <div className="px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <MobileCarousel count={11} desktopCols={3}>
             {courses.map((course) => (
-              <Link key={course.title} href={course.href} className="group">
+              <Link key={course.title} href={course.href} className="group snap-center shrink-0 w-[80vw] md:w-auto h-full flex flex-col">
                 <div className="flex flex-col h-full bg-[#F0EBD8] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                   {/* Image */}
                   <div className="relative w-full aspect-[3/2]">
@@ -180,11 +180,11 @@ export default function AdvancedPage() {
                     >
                       {course.title}
                     </h2>
-                    <p className="text-sm text-[#0A1628]/60 leading-relaxed flex-1 mb-3">
+                    <p className="text-sm text-[#0A1628]/60 leading-relaxed line-clamp-3 mb-3">
                       {course.description}
                     </p>
                     {/* Info row */}
-                    <div className="flex items-center justify-center gap-3 text-sm font-normal text-[#0A1628]/50 mb-3">
+                    <div className="flex items-center justify-center gap-2 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-3 mt-auto">
                       <div className="flex items-center gap-1.5">
                         <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="12" cy="12" r="7" />
@@ -218,7 +218,7 @@ export default function AdvancedPage() {
                 </div>
               </Link>
             ))}
-          </div>
+          </MobileCarousel>
         </div>
       </section>
 

@@ -40,7 +40,7 @@ export default function MaldivesLiveaboardPage() {
           </div>
 
           <div className="max-w-3xl">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
+            <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
               Hang Loose Liveaboard
             </p>
             <h1 className="text-3xl md:text-5xl font-black uppercase text-[#0A1628] mb-4" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
@@ -71,7 +71,7 @@ export default function MaldivesLiveaboardPage() {
               href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20the%20Maldives%20Liveaboard%20🤿"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+              className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Reserve Your Spot →
@@ -84,7 +84,7 @@ export default function MaldivesLiveaboardPage() {
       <section className="py-6 md:py-8 px-6 md:px-12 lg:px-20">
         {/* Mobile */}
         <div className="md:hidden flex flex-col gap-3">
-          <div className="relative overflow-hidden rounded-2xl aspect-[8/5]">
+          <div className="relative overflow-hidden rounded-2xl aspect-[3/2]">
             <Image src="/gallery/photo1.webp" alt="Maldives liveaboard" fill className="object-cover" sizes="100vw" />
           </div>
           <div className="flex gap-3">
@@ -218,7 +218,7 @@ export default function MaldivesLiveaboardPage() {
             href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20the%20Maldives%20Liveaboard%20🤿"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+            className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Reserve Your Spot →

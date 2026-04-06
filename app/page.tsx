@@ -419,88 +419,33 @@ export default function Home() {
             }`}
             style={{ transitionDelay: coursesVisible ? '0ms' : '0ms' }}
           >
-            <div className="relative w-full aspect-[16/9]">
-              <Image
-                src="/gallery/photo1.webp"
-                alt="Introductory dive experience in Koh Tao"
-                fill
-                className="object-cover transition-transform duration-500 ease-out"
-              />
+            <div className="relative w-full aspect-[3/2]">
+              <Image src="/gallery/photo1.webp" alt="Introductory dive experience in Koh Tao" fill className="object-cover transition-transform duration-500 ease-out" />
             </div>
-
-            <div className="flex flex-col flex-1 p-5 md:p-6">
-              <h3
-                className="mt-2 text-xl md:text-2xl uppercase text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
-              >
+            <div className="flex flex-col flex-1 p-5 md:p-6 text-center items-center">
+              <h3 className="text-xl md:text-2xl uppercase text-[#0A1628] mb-2" style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}>
                 Try Scuba Diving
               </h3>
-              <p className="mt-2 text-sm text-black leading-snug">
-                Curious about scuba diving? Take your first dive in Koh Tao with our beginner-friendly
-                introductory dive, where you&apos;ll explore tropical reefs and marine life in clear,
-                warm waters under the relaxed and professional guidance of our experienced instructors.
+              <p className="text-sm text-[#0A1628]/60 leading-relaxed line-clamp-3 mb-3">
+                Curious about scuba diving? Take your first dive in Koh Tao with our beginner-friendly introductory dive, where you&apos;ll explore tropical reefs and marine life under the guidance of our experienced instructors.
               </p>
-
-              <div className="mt-auto space-y-3">
-                <div className="flex items-center justify-between text-xs font-medium text-black">
-                  <div className="flex items-center gap-2 whitespace-nowrap">
-                    <svg
-                      className="h-6 w-6 text-[#4D9995]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <circle cx="12" cy="12" r="7" />
-                      <path d="M12 9v3l2 2" />
-                    </svg>
-                    <span>1 Day</span>
-                  </div>
-                  <div className="flex items-center gap-2 whitespace-nowrap">
-                    <svg
-                      className="h-6 w-6 text-[#4D9995]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" />
-                    </svg>
-                    <span>2 Dives</span>
-                  </div>
-                  <div className="flex items-center gap-2 whitespace-nowrap">
-                    <svg
-                      className="h-6 w-6 text-[#4D9995]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
-                    </svg>
-                    <span>3,500 THB</span>
-                  </div>
+              <div className="flex items-center justify-center gap-2 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-3 mt-auto">
+                <div className="flex items-center gap-1.5">
+                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" /></svg>
+                  <span>1 Day</span>
                 </div>
-
-                <div className="flex justify-start">
-                  <Link
-                    href="/courses/beginners/try-scuba"
-                    className="inline-flex border-none bg-transparent text-sm font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-0 py-3"
-                    style={{ fontFamily: 'var(--font-space-mono)' }}
-                  >
-                    Learn More
-                  </Link>
+                <div className="flex items-center gap-1.5">
+                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" /></svg>
+                  <span>2 Dives</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" /></svg>
+                  <span className="text-[#F8B85D] font-bold">3,500 THB</span>
                 </div>
               </div>
+              <Link href="/courses/beginners/try-scuba" className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                Learn More →
+              </Link>
             </div>
           </div>
 
@@ -511,87 +456,33 @@ export default function Home() {
             }`}
             style={{ transitionDelay: coursesVisible ? '120ms' : '0ms' }}
           >
-            <div className="relative w-full aspect-[16/9]">
-              <Image
-                src="/gallery/photo2.webp"
-                alt="Open Water diver training in Koh Tao"
-                fill
-                className="object-cover transition-transform duration-500 ease-out"
-              />
+            <div className="relative w-full aspect-[3/2]">
+              <Image src="/gallery/photo2.webp" alt="Open Water diver training in Koh Tao" fill className="object-cover transition-transform duration-500 ease-out" />
             </div>
-
-            <div className="flex flex-col flex-1 p-5 md:p-6">
-              <h3
-                className="mt-2 text-xl md:text-2xl uppercase text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
-              >
+            <div className="flex flex-col flex-1 p-5 md:p-6 text-center items-center">
+              <h3 className="text-xl md:text-2xl uppercase text-[#0A1628] mb-2" style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}>
                 Open Water Diver
               </h3>
-              <p className="mt-2 text-sm text-black leading-snug">
-                Become a certified Open Water Diver in only three days and gain a worldwide-recognized
-                license that lets you dive safely and confidently to 18 meters.
+              <p className="text-sm text-[#0A1628]/60 leading-relaxed line-clamp-3 mb-3">
+                Become a certified Open Water Diver in only three days and gain a worldwide-recognized license that lets you dive safely and confidently to 18 meters.
               </p>
-
-              <div className="mt-auto space-y-3">
-                <div className="flex items-center justify-between text-xs font-medium text-black">
-                  <div className="flex items-center gap-2 whitespace-nowrap">
-                    <svg
-                      className="h-6 w-6 text-[#4D9995]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <circle cx="12" cy="12" r="7" />
-                      <path d="M12 9v3l2 2" />
-                    </svg>
-                    <span>2.5 Days</span>
-                  </div>
-                  <div className="flex items-center gap-2 whitespace-nowrap">
-                    <svg
-                      className="h-6 w-6 text-[#4D9995]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" />
-                    </svg>
-                    <span>6 Dives</span>
-                  </div>
-                  <div className="flex items-center gap-2 whitespace-nowrap">
-                    <svg
-                      className="h-6 w-6 text-[#4D9995]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
-                    </svg>
-                    <span>9,900 THB</span>
-                  </div>
+              <div className="flex items-center justify-center gap-2 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-3 mt-auto">
+                <div className="flex items-center gap-1.5">
+                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" /></svg>
+                  <span>2.5 Days</span>
                 </div>
-
-                <div className="flex justify-start">
-                  <Link
-                    href="/courses/beginners/open-water"
-                    className="inline-flex border-none bg-transparent text-sm font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-0 py-3"
-                    style={{ fontFamily: 'var(--font-space-mono)' }}
-                  >
-                    Learn More
-                  </Link>
+                <div className="flex items-center gap-1.5">
+                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" /></svg>
+                  <span>6 Dives</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" /></svg>
+                  <span className="text-[#F8B85D] font-bold">9,900 THB</span>
                 </div>
               </div>
+              <Link href="/courses/beginners/open-water" className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                Learn More →
+              </Link>
             </div>
           </div>
 
@@ -602,88 +493,33 @@ export default function Home() {
             }`}
             style={{ transitionDelay: coursesVisible ? '240ms' : '0ms' }}
           >
-            <div className="relative w-full aspect-[16/9]">
-              <Image
-                src="/gallery/photo3.webp"
-                alt="Advanced Open Water diving in Koh Tao"
-                fill
-                className="object-cover transition-transform duration-500 ease-out"
-              />
+            <div className="relative w-full aspect-[3/2]">
+              <Image src="/gallery/photo3.webp" alt="Advanced Open Water diving in Koh Tao" fill className="object-cover transition-transform duration-500 ease-out" />
             </div>
-
-            <div className="flex flex-col flex-1 p-5 md:p-6">
-              <h3
-                className="mt-2 text-xl md:text-2xl uppercase text-[#0A1628]"
-                style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}
-              >
-                Advanced Open Water Diver
+            <div className="flex flex-col flex-1 p-5 md:p-6 text-center items-center">
+              <h3 className="text-xl md:text-2xl uppercase text-[#0A1628] mb-2" style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}>
+                Advanced Diver
               </h3>
-              <p className="mt-2 text-sm text-black leading-snug">
-                The Advanced Open Water Diver course takes your diving further with deeper dives, night
-                adventures, wreck exploration, and improved buoyancy—all while building confidence and
-                maximizing fun underwater.
+              <p className="text-sm text-[#0A1628]/60 leading-relaxed line-clamp-3 mb-3">
+                The Advanced Open Water Diver course takes your diving further with deeper dives, night adventures, wreck exploration, and improved buoyancy—all while building confidence and maximizing fun underwater.
               </p>
-
-              <div className="mt-auto space-y-3">
-                <div className="flex items-center justify-between text-xs font-medium text-black">
-                  <div className="flex items-center gap-2 whitespace-nowrap">
-                    <svg
-                      className="h-6 w-6 text-[#4D9995]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <circle cx="12" cy="12" r="7" />
-                      <path d="M12 9v3l2 2" />
-                    </svg>
-                    <span>2 Days</span>
-                  </div>
-                  <div className="flex items-center gap-2 whitespace-nowrap">
-                    <svg
-                      className="h-6 w-6 text-[#4D9995]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" />
-                    </svg>
-                    <span>5 Dives</span>
-                  </div>
-                  <div className="flex items-center gap-2 whitespace-nowrap">
-                    <svg
-                      className="h-6 w-6 text-[#4D9995]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
-                    </svg>
-                    <span>9,500 THB</span>
-                  </div>
+              <div className="flex items-center justify-center gap-2 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-3 mt-auto">
+                <div className="flex items-center gap-1.5">
+                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" /></svg>
+                  <span>2 Days</span>
                 </div>
-
-                <div className="flex justify-start">
-                  <Link
-                    href="/courses/advanced/advanced-open-water"
-                    className="inline-flex border-none bg-transparent text-sm font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4 px-0 py-3"
-                    style={{ fontFamily: 'var(--font-space-mono)' }}
-                  >
-                    Learn More
-                  </Link>
+                <div className="flex items-center gap-1.5">
+                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" /></svg>
+                  <span>5 Dives</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" /></svg>
+                  <span className="text-[#F8B85D] font-bold">9,500 THB</span>
                 </div>
               </div>
+              <Link href="/courses/advanced/advanced-open-water" className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                Learn More →
+              </Link>
             </div>
           </div>
         </MobileCarousel>
@@ -696,7 +532,7 @@ export default function Home() {
             className="inline-flex border-none bg-transparent px-0 py-2 text-sm font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
-            Explore All Courses
+            Explore All Courses →
           </Link>
         </div>
       </section>
@@ -835,9 +671,52 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Carousel */}
-          <div className="relative">
-            {/* Cards container */}
+          {/* Mobile: native scroll snap */}
+          <div
+            className="md:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 -mx-6 px-6"
+            style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}
+          >
+            {reviews.map((review, i) => (
+              <a
+                key={i}
+                href={googleReviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="snap-center flex-shrink-0 w-[82vw] group cursor-pointer"
+              >
+                <div className="bg-white rounded-xl p-6 h-full flex flex-col hover:shadow-md transition-shadow duration-300">
+                  <div className="flex gap-0.5 mb-4">
+                    {[...Array(5)].map((_, j) => (
+                      <svg key={j} className="w-4 h-4" viewBox="0 0 24 24" fill="#F8B85D">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-sm text-[#0A1628]/70 leading-relaxed flex-1">&ldquo;{review.text}&rdquo;</p>
+                  <div className="mt-5 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-8 h-8 rounded-full ${review.color} flex items-center justify-center text-xs font-bold text-white`} style={{ fontFamily: 'var(--font-space-mono)' }}>
+                        {review.initial}
+                      </div>
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-wider text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>{review.name}</p>
+                        <p className="text-[10px] text-[#97ABB1]">Google Review</p>
+                      </div>
+                    </div>
+                    <svg className="w-4 h-4 opacity-30" viewBox="0 0 24 24" fill="none">
+                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
+                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
+                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Desktop: JS arrow carousel */}
+          <div className="hidden md:block relative">
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-500 ease-out"
@@ -849,10 +728,9 @@ export default function Home() {
                     href={googleReviewsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-shrink-0 w-full md:w-1/3 px-3 group cursor-pointer"
+                    className="flex-shrink-0 w-1/3 px-3 group cursor-pointer"
                   >
                     <div className="bg-white rounded-xl p-6 h-full flex flex-col hover:shadow-md transition-shadow duration-300">
-                      {/* Stars */}
                       <div className="flex gap-0.5 mb-4">
                         {[...Array(5)].map((_, j) => (
                           <svg key={j} className="w-4 h-4" viewBox="0 0 24 24" fill="#F8B85D">
@@ -860,35 +738,18 @@ export default function Home() {
                           </svg>
                         ))}
                       </div>
-                      {/* Text */}
-                      <p className="text-sm text-[#0A1628]/70 leading-relaxed flex-1">
-                        &ldquo;{review.text}&rdquo;
-                      </p>
-                      {/* Author */}
+                      <p className="text-sm text-[#0A1628]/70 leading-relaxed flex-1">&ldquo;{review.text}&rdquo;</p>
                       <div className="mt-5 flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div
-                            className={`w-8 h-8 rounded-full ${review.color} flex items-center justify-center text-xs font-bold text-white`}
-                            style={{ fontFamily: 'var(--font-space-mono)' }}
-                          >
+                          <div className={`w-8 h-8 rounded-full ${review.color} flex items-center justify-center text-xs font-bold text-white`} style={{ fontFamily: 'var(--font-space-mono)' }}>
                             {review.initial}
                           </div>
                           <div>
-                            <p
-                              className="text-xs font-bold uppercase tracking-wider text-[#0A1628]"
-                              style={{ fontFamily: 'var(--font-space-mono)' }}
-                            >
-                              {review.name}
-                            </p>
+                            <p className="text-xs font-bold uppercase tracking-wider text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)' }}>{review.name}</p>
                             <p className="text-[10px] text-[#97ABB1]">Google Review</p>
                           </div>
                         </div>
-                        {/* Small Google icon */}
-                        <svg
-                          className="w-4 h-4 opacity-30 group-hover:opacity-60 transition-opacity"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
+                        <svg className="w-4 h-4 opacity-30 group-hover:opacity-60 transition-opacity" viewBox="0 0 24 24" fill="none">
                           <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
                           <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
                           <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
@@ -900,41 +761,23 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
-            {/* Navigation Arrows */}
             <button
               onClick={() => setReviewIndex(Math.max(0, reviewIndex - 1))}
-              className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-all ${
-                reviewIndex === 0 ? 'opacity-30 cursor-not-allowed' : 'opacity-100'
-              }`}
+              className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-all ${reviewIndex === 0 ? 'opacity-30 cursor-not-allowed' : 'opacity-100'}`}
               disabled={reviewIndex === 0}
               aria-label="Previous reviews"
             >
-              <svg
-                className="w-5 h-5 text-[#0A1628]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
+              <svg className="w-5 h-5 text-[#0A1628]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             <button
               onClick={() => setReviewIndex(Math.min(reviews.length - 3, reviewIndex + 1))}
-              className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-all ${
-                reviewIndex >= reviews.length - 3 ? 'opacity-30 cursor-not-allowed' : 'opacity-100'
-              }`}
+              className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-all ${reviewIndex >= reviews.length - 3 ? 'opacity-30 cursor-not-allowed' : 'opacity-100'}`}
               disabled={reviewIndex >= reviews.length - 3}
               aria-label="Next reviews"
             >
-              <svg
-                className="w-5 h-5 text-[#0A1628]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
+              <svg className="w-5 h-5 text-[#0A1628]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </button>

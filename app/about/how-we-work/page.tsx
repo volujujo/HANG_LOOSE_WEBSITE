@@ -19,7 +19,7 @@ export default function HowWeWorkPage() {
           </div>
 
           <div className="max-w-3xl">
-            <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#4D9995] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
+            <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
               Our Approach
             </p>
             <h1 className="text-4xl md:text-6xl font-black uppercase text-[#0A1628] mb-6" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
@@ -30,11 +30,11 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* Beachfront Based */}
-      <section className="py-8 md:py-12">
+      <section className="py-6 md:py-8">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
+              <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
                 Location
               </p>
               <h2 className="text-2xl md:text-4xl font-black uppercase text-[#0A1628] mb-5" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
@@ -51,7 +51,7 @@ export default function HowWeWorkPage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] lg:aspect-auto rounded-xl overflow-hidden">
               <Image
                 src="/gallery/photo3.webp"
                 alt="Hang Loose Divers beachfront location on Sairee Beach"
@@ -64,16 +64,11 @@ export default function HowWeWorkPage() {
         </div>
       </section>
 
-      {/* Dot Divider */}
-      <div className="flex justify-center py-6">
-        <div className="h-2 w-2 rounded-full bg-[#F8B85D]" />
-      </div>
-
       {/* Top-Notch Dive Professionals */}
-      <section className="py-8 md:py-12">
+      <section className="py-6 md:py-8">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden order-2 lg:order-1">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
+            <div className="relative aspect-[4/3] lg:aspect-auto rounded-xl overflow-hidden order-2 lg:order-1">
               <Image
                 src="/gallery/photo4.webp"
                 alt="Hang Loose Divers professional dive team"
@@ -83,7 +78,7 @@ export default function HowWeWorkPage() {
               />
             </div>
             <div className="order-1 lg:order-2">
-              <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
+              <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
                 Our Team
               </p>
               <h2 className="text-2xl md:text-4xl font-black uppercase text-[#0A1628] mb-5" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
@@ -125,7 +120,7 @@ export default function HowWeWorkPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link
               href="/courses"
-              className="text-sm font-black uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+              className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Explore Courses →
@@ -134,7 +129,7 @@ export default function HowWeWorkPage() {
               href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20diving%20with%20Hang%20Loose%20🤿"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-black uppercase tracking-wider text-[#4D9995] hover:underline underline-offset-4 transition-all duration-300"
+              className="text-sm font-normal uppercase tracking-wide text-[#4D9995] hover:underline underline-offset-4 transition-all duration-300"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Book Now →

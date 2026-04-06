@@ -30,8 +30,8 @@ export function GallerySection() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        {/* Top row: large photo1 — full width, half the previous height */}
-        <div className="relative overflow-hidden rounded-2xl aspect-[8/5]">
+        {/* Top row: large photo1 — full width, matches height of photo2 */}
+        <div className="relative overflow-hidden rounded-2xl aspect-[3/2]">
           <Image
             src="/gallery/photo1.webp"
             alt="Diving experience in Koh Tao"

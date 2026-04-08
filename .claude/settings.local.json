@@ -9,7 +9,8 @@
       "Bash(sed -i '74d' app/courses/beginners/page.tsx)",
       "Bash(sed -i '73d' app/courses/professionals/page.tsx)",
       "Bash(sed -i 's/leading-relaxed flex-1 mb-3/leading-relaxed line-clamp-3 mb-3/g' app/page.tsx)",
-      "Bash(sed -i 's/gap-2 md:gap-3 text-xs md:text-sm font-normal text-\\\\[#0A1628\\\\]\\\\/50 mb-3\"/gap-2 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]\\\\/50 mb-3 mt-auto\"/g' app/page.tsx)"
+      "Bash(sed -i 's/gap-2 md:gap-3 text-xs md:text-sm font-normal text-\\\\[#0A1628\\\\]\\\\/50 mb-3\"/gap-2 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]\\\\/50 mb-3 mt-auto\"/g' app/page.tsx)",
+      "Bash(xargs grep:*)"
     ]
   }
 }

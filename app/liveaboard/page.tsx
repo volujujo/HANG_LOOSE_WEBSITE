@@ -94,12 +94,12 @@ export default function LiveaboardPage() {
                           Small Group
                         </span>
                       </div>
-                      <span className="text-[#F8B85D] text-sm font-bold">
+                      <span className="text-sm font-bold text-[#0A1628]/60">
                         {trip.price}
                       </span>
                     </div>
                     <div className="flex justify-start">
-                      <span className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] group-hover:underline underline-offset-4 transition-all" style={{ fontFamily: 'var(--font-space-mono)' }}>
+                      <span className="text-base font-normal uppercase tracking-wide text-[#F8B85D] group-hover:underline underline-offset-4 transition-all" style={{ fontFamily: 'var(--font-space-mono)' }}>
                         View Trip Details →
                       </span>
                     </div>

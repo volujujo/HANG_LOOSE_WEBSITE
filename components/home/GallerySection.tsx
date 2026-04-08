@@ -22,7 +22,7 @@ export function GallerySection() {
     <section
       id="gallery"
       ref={ref}
-      className="bg-[#FFFAE7] px-6 md:px-12 lg:px-20 pb-16 md:pb-24"
+      className="bg-[#FFFAE7] px-6 md:px-12 lg:px-20 pb-8 md:pb-14"
     >
       {/* Mobile layout: 2-column masonry-style */}
       <div
@@ -77,7 +77,7 @@ export function GallerySection() {
       {/* Desktop layout: exact match to reference image */}
       {/* Layout: Left ~50% photo1 (tall), Middle ~25% photo2 (tall), Right ~25% photo3 + photo4 (stacked) */}
       <div
-        className={`hidden md:flex gap-4 h-[493px] lg:h-[578px] xl:h-[612px] transition-all duration-700 ease-out ${
+        className={`hidden md:flex gap-4 h-[360px] lg:h-[430px] xl:h-[460px] transition-all duration-700 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >

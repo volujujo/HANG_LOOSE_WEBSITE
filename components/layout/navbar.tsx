@@ -89,6 +89,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    setMobileOpen(false)
+  }, [pathname])
+
   // Dynamic colors based on scroll state and route
   const isTransparent = isHome && !scrolled
   const textColor = isTransparent ? 'text-white' : 'text-[#0A1628]'
@@ -151,11 +155,11 @@ export default function Navbar() {
                 <div className="absolute top-full left-0 mt-0 pt-2">
                   {item.label === 'Courses' ? (
                     <div
-                      className="bg-[#FFFAE7] rounded-lg shadow-2xl flex"
+                      className="bg-[#FFFAE7] rounded-xl shadow-2xl flex overflow-hidden"
                       onMouseLeave={() => setOpenGroup(null)}
                     >
                       {/* Left: 3 group names */}
-                      <div className="py-4 min-w-[200px]">
+                      <div className="py-6 px-8 min-w-[220px] flex flex-col gap-4">
                         {item.dropdown.map((group) => (
                           <Link
                             key={group.group}
@@ -165,31 +169,27 @@ export default function Navbar() {
                               '/courses/professionals'
                             }
                             onMouseEnter={() => setOpenGroup(group.group)}
-                            className={`!p-0 flex items-center justify-between px-6 py-3 transition-colors duration-150 ${
+                            className={`!p-0 flex items-center gap-2 text-base font-normal uppercase tracking-wider transition-colors duration-150 ${
                               openGroup === group.group ? 'text-[#F8B85D]' : 'text-[#0A1628] hover:text-[#F8B85D]'
                             }`}
+                            style={{ fontFamily: 'var(--font-space-mono)' }}
                           >
-                            <span
-                              className="text-[15px] font-normal uppercase tracking-wider"
-                              style={{ fontFamily: 'var(--font-space-mono)' }}
-                            >
-                              {group.group}
-                            </span>
-                            <span className="ml-8 text-sm opacity-40">›</span>
+                            {group.group}
+                            <span className="text-sm opacity-30">›</span>
                           </Link>
                         ))}
                       </div>
 
                       {/* Right: sub-items flyout */}
                       {openGroup && (
-                        <div className="border-l border-[#0A1628]/10 py-4 px-6 min-w-[220px] flex flex-col gap-3 justify-center">
+                        <div className="border-l border-[#0A1628]/10 py-6 px-8 min-w-[240px] flex flex-col gap-4 justify-center">
                           {item.dropdown
                             .find((g) => g.group === openGroup)
                             ?.items.map((subItem) => (
                               <Link
                                 key={subItem.label}
                                 href={subItem.href}
-                                className="!p-0 text-[15px] font-normal uppercase tracking-wider text-[#0A1628] hover:text-[#97ABB1] transition-colors"
+                                className="!p-0 text-base font-normal uppercase tracking-wider text-[#0A1628] hover:text-[#97ABB1] transition-colors"
                                 style={{ fontFamily: 'var(--font-space-mono)' }}
                               >
                                 {subItem.label}
@@ -199,13 +199,13 @@ export default function Navbar() {
                       )}
                     </div>
                   ) : (
-                    <div className="bg-[#FFFAE7] rounded-lg shadow-2xl p-6 min-w-[180px] flex flex-col gap-2">
+                    <div className="bg-[#FFFAE7] rounded-xl shadow-2xl py-6 px-8 min-w-[200px] flex flex-col gap-4">
                       {item.dropdown.flatMap((group) =>
                         group.items.map((subItem) => (
                           <Link
                             key={subItem.label}
                             href={subItem.href}
-                            className="!p-0 text-sm font-normal uppercase tracking-wider text-[#0A1628] hover:text-[#97ABB1] transition-colors"
+                            className="!p-0 text-base font-normal uppercase tracking-wider text-[#0A1628] hover:text-[#97ABB1] transition-colors"
                             style={{ fontFamily: 'var(--font-space-mono)' }}
                           >
                             {subItem.label}
@@ -298,7 +298,7 @@ export default function Navbar() {
                             group.group === 'Advanced' ? '/courses/advanced' :
                             '/courses/professionals'
                           }
-                          className="!p-0 text-black text-sm font-normal uppercase tracking-wider hover:text-[#F8B85D] transition-colors"
+                          className="!p-0 text-black text-base font-normal uppercase tracking-wider hover:text-[#F8B85D] transition-colors"
                           style={{ fontFamily: 'var(--font-space-mono)' }}
                           onClick={() => setMobileOpen(false)}
                         >
@@ -310,7 +310,7 @@ export default function Navbar() {
                           <Link
                             key={subItem.label}
                             href={subItem.href}
-                            className="!p-0 text-black text-sm font-normal uppercase tracking-wider hover:text-[#F8B85D] transition-colors"
+                            className="!p-0 text-black text-base font-normal uppercase tracking-wider hover:text-[#F8B85D] transition-colors"
                             style={{ fontFamily: 'var(--font-space-mono)' }}
                             onClick={() => setMobileOpen(false)}
                           >

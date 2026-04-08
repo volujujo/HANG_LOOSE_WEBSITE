@@ -20,7 +20,7 @@ const courses = [
     image: '/gallery/photo2.webp',
     duration: '2.5 Days',
     dives: '6 Dives',
-    price: '9,900 THB',
+    price: '10,500 THB',
     description: "The SSI Open Water Diver course is your gateway to scuba diving, certifying you to dive to 18 meters. This worldwide recognized and valid for life certification gives you the freedom to dive anywhere your travels take you.",
   },
 ]
@@ -51,7 +51,7 @@ export default function BeginnersPage() {
 
           <div className="max-w-3xl mx-auto text-center">
             <p
-              className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+              className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Beginner Programs
@@ -79,8 +79,8 @@ export default function BeginnersPage() {
         <div className="px-6 md:px-12 lg:px-20">
           <MobileCarousel count={2} desktopCols={2}>
             {courses.map((course) => (
-              <Link key={course.title} href={course.href} className="group snap-center shrink-0 w-[80vw] md:w-auto h-full flex flex-col">
-                <div className="flex flex-col h-full bg-[#F0EBD8] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <Link key={course.title} href={course.href} className="group snap-center shrink-0 w-[80vw] md:w-auto flex flex-col">
+                <div className="flex flex-col flex-1 bg-[#F0EBD8] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                   {/* Image */}
                   <div className="relative w-full aspect-[3/2]">
                     <Image
@@ -99,26 +99,26 @@ export default function BeginnersPage() {
                     >
                       {course.title}
                     </h2>
-                    <p className="text-sm text-[#0A1628]/60 leading-relaxed line-clamp-4 mb-4">
+                    <p className="text-sm text-[#0A1628]/60 leading-relaxed mb-4">
                       {course.description}
                     </p>
                     {/* Info row */}
                     <div className="flex items-center justify-center gap-2 md:gap-4 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-4 mt-auto">
                       <div className="flex items-center gap-1.5">
-                        <svg className="h-5 w-5 md:h-6 md:w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="h-5 w-5 md:h-6 md:w-6 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="12" cy="12" r="7" />
                           <path d="M12 9v3l2 2" />
                         </svg>
                         <span>{course.duration}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <svg className="h-5 w-5 md:h-6 md:w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="h-5 w-5 md:h-6 md:w-6 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" />
                         </svg>
                         <span>{course.dives}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <svg className="h-5 w-5 md:h-6 md:w-6 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="h-5 w-5 md:h-6 md:w-6 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                         </svg>
                         <span>{course.price}</span>
@@ -127,7 +127,7 @@ export default function BeginnersPage() {
                     {/* CTA */}
                     <div className="flex justify-center">
                       <span
-                        className="text-sm font-normal uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
+                        className="text-base font-normal uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
                         style={{ fontFamily: 'var(--font-space-mono)' }}
                       >
                         Learn More →
@@ -146,7 +146,7 @@ export default function BeginnersPage() {
       <section className="py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p
-            className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+            className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             What&apos;s Next?
@@ -164,14 +164,14 @@ export default function BeginnersPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
               href="/courses/advanced"
-              className="text-sm font-normal uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+              className="text-base font-normal uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Advanced Courses →
             </Link>
             <Link
               href="/fun-dives/fun-dives"
-              className="text-sm font-normal uppercase tracking-wider text-[#4D9995] hover:underline underline-offset-4 transition-all duration-300"
+              className="text-base font-normal uppercase tracking-wider text-[#97ABB1] hover:underline underline-offset-4 transition-all duration-300"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Fun Dives →

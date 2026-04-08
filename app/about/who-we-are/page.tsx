@@ -19,7 +19,7 @@ export default function WhoWeArePage() {
           </div>
 
           <div className="max-w-3xl">
-            <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
+            <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
               About Us
             </p>
             <h1 className="text-4xl md:text-6xl font-black uppercase text-[#0A1628] mb-6" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>
@@ -66,16 +66,7 @@ export default function WhoWeArePage() {
       <section className="py-6 md:py-8">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
-            <div className="relative aspect-[4/3] lg:aspect-auto rounded-xl overflow-hidden order-2 lg:order-1">
-              <Image
-                src="/gallery/photo2.webp"
-                alt="Be a friend — Hang Loose Divers mindset"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div className="order-1 lg:order-2">
+            <div className="lg:order-2">
               <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#F8B85D] mb-3" style={{ fontFamily: 'var(--font-space-mono)' }}>
                 Our Mindset
               </p>
@@ -89,6 +80,15 @@ export default function WhoWeArePage() {
                 <p>To the environment, continuously striving to find ways to minimize our negative impact and initiate positive actions and programs.</p>
                 <p>To the local communities, by supporting local businesses and embracing local culture.</p>
               </div>
+            </div>
+            <div className="relative aspect-[4/3] lg:aspect-auto rounded-xl overflow-hidden lg:order-1">
+              <Image
+                src="/gallery/photo2.webp"
+                alt="Be a friend — Hang Loose Divers mindset"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function WhoWeArePage() {
           </p>
           <Link
             href="/about/how-we-work"
-            className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+            className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             How We Work →

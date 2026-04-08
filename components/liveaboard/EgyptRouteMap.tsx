@@ -57,7 +57,7 @@ export default function EgyptRouteMap() {
         {/* Coast labels */}
         <text x="8" y="12" fill="#F9F4EC" opacity="0.2" fontSize="3.5" fontWeight="bold" style={{ fontFamily: 'var(--font-space-mono)' }}>SINAI</text>
         <text x="88" y="12" fill="#F9F4EC" opacity="0.2" fontSize="3.5" fontWeight="bold" style={{ fontFamily: 'var(--font-space-mono)' }}>EGYPT</text>
-        <text x="40" y="68" fill="#4D9995" opacity="0.3" fontSize="5" fontWeight="bold" style={{ fontFamily: 'var(--font-space-mono)' }}>RED SEA</text>
+        <text x="40" y="68" fill="#97ABB1" opacity="0.3" fontSize="5" fontWeight="bold" style={{ fontFamily: 'var(--font-space-mono)' }}>RED SEA</text>
 
         {/* Route line (dashed) */}
         <path
@@ -105,7 +105,7 @@ export default function EgyptRouteMap() {
               <text
                 x={site.x + (site.x > 60 ? -2 : 2.5)}
                 y={site.y + 0.5}
-                fill="#4D9995"
+                fill="#97ABB1"
                 fontSize="1.8"
                 textAnchor={site.x > 60 ? 'end' : 'start'}
                 style={{ fontFamily: 'var(--font-space-mono)' }}
@@ -131,7 +131,7 @@ export default function EgyptRouteMap() {
           <span className="text-[10px] text-[#F9F4EC]/50" style={{ fontFamily: 'var(--font-space-mono)' }}>Route</span>
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="text-[10px] text-[#4D9995]" style={{ fontFamily: 'var(--font-space-mono)' }}>8 Days · 20+ Dives</span>
+          <span className="text-[10px] text-[#97ABB1]" style={{ fontFamily: 'var(--font-space-mono)' }}>8 Days · 20+ Dives</span>
         </div>
       </div>
     </div>

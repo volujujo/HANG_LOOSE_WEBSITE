@@ -2,14 +2,14 @@ import { MobileCarousel } from '@/components/ui/MobileCarousel'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const packages = [
+const packages: { title: string; href: string; image: string; duration: string; dives: string; price: string; pricePrefix?: string; description: string }[] = [
   {
     title: 'Open Water + Advanced',
     href: '/packages/open-water-advanced',
     image: '/gallery/photo1.webp',
     duration: '4 Days',
     dives: '9 Dives',
-    price: '18,500 THB',
+    price: '19,000 THB',
     description: "Go from beginner to confident advanced diver in one seamless journey — the fastest way to earn two certifications and unlock deeper, more exciting dives.",
   },
   {
@@ -18,7 +18,8 @@ const packages = [
     image: '/gallery/photo4.webp',
     duration: '2–3 Days',
     dives: '2–4 Dives',
-    price: 'From 10,000 THB',
+    pricePrefix: 'From',
+    price: '10,000 THB',
     description: "Maximize your bottom time and push your limits. Dive deeper, stay longer, and explore advanced sites with confidence and control.",
   },
   {
@@ -40,7 +41,7 @@ export default function PackagesPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto text-center">
             <p
-              className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+              className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Save More, Dive More
@@ -66,8 +67,8 @@ export default function PackagesPage() {
         <div className="px-6 md:px-12 lg:px-20">
           <MobileCarousel count={3} desktopCols={3}>
             {packages.map((pkg) => (
-              <Link key={pkg.title} href={pkg.href} className="group snap-center shrink-0 w-[80vw] md:w-auto h-full flex flex-col">
-                <div className="flex flex-col h-full bg-[#F0EBD8] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <Link key={pkg.title} href={pkg.href} className="group snap-center shrink-0 w-[80vw] md:w-auto flex flex-col">
+                <div className="flex flex-col flex-1 bg-[#F0EBD8] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                   <div className="relative w-full aspect-[3/2]">
                     <Image
                       src={pkg.image}
@@ -84,31 +85,34 @@ export default function PackagesPage() {
                     >
                       {pkg.title}
                     </h2>
-                    <p className="text-sm text-[#0A1628]/60 leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-sm text-[#0A1628]/60 leading-relaxed mb-4">
                       {pkg.description}
                     </p>
-                    <div className="flex items-center justify-center gap-2 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-4 mt-auto">
-                      <div className="flex items-center gap-1.5">
-                        <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <div className="flex items-center justify-center gap-1.5 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-4 mt-auto whitespace-nowrap">
+                      <div className="flex items-center gap-1">
+                        <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" />
                         </svg>
                         <span>{pkg.duration}</span>
                       </div>
-                      <div className="flex items-center gap-1.5">
-                        <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <div className="flex items-center gap-1">
+                        <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" />
                         </svg>
                         <span>{pkg.dives}</span>
                       </div>
-                      <div className="flex items-center gap-1.5">
-                        <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <div className="flex items-center gap-1">
+                        <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                           <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                         </svg>
-                        <span className="text-[#F8B85D] font-bold">{pkg.price}</span>
+                        <span className="font-bold text-[#0A1628]/60 flex flex-col items-center leading-tight">
+                          {pkg.pricePrefix && <span className="font-normal text-[10px]">{pkg.pricePrefix}</span>}
+                          {pkg.price}
+                        </span>
                       </div>
                     </div>
                     <span
-                      className="text-sm font-normal uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
+                      className="text-base font-normal uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
                       style={{ fontFamily: 'var(--font-space-mono)' }}
                     >
                       Learn More →
@@ -125,7 +129,7 @@ export default function PackagesPage() {
       <section className="py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p
-            className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+            className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Not Sure Which Package?
@@ -145,14 +149,14 @@ export default function PackagesPage() {
               href="https://wa.me/66971543171?text=Hi!%20I%27m%20interested%20in%20a%20course%20package%20%F0%9F%A4%BF"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-normal uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+              className="text-base font-normal uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Get in Touch →
             </a>
             <Link
               href="/courses"
-              className="text-sm font-normal uppercase tracking-wider text-[#4D9995] hover:underline underline-offset-4 transition-all duration-300"
+              className="text-base font-normal uppercase tracking-wider text-[#97ABB1] hover:underline underline-offset-4 transition-all duration-300"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Browse All Courses →

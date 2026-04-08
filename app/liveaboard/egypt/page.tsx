@@ -71,7 +71,7 @@ export default function EgyptLiveaboardPage() {
               href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20the%20Egypt%20Liveaboard%20🤿"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+              className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Reserve Your Spot →
@@ -102,7 +102,7 @@ export default function EgyptLiveaboardPage() {
           </div>
         </div>
         {/* Desktop */}
-        <div className="hidden md:flex gap-4 h-[480px] lg:h-[560px]">
+        <div className="hidden md:flex gap-4 h-[360px] lg:h-[430px]">
           <div className="relative overflow-hidden rounded-2xl flex-[1.1] min-w-0">
             <Image src="/gallery/photo1.webp" alt="Egypt Red Sea liveaboard" fill className="object-cover" sizes="50vw" />
           </div>
@@ -157,7 +157,7 @@ export default function EgyptLiveaboardPage() {
                 "Professional photos and videos",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-2.5">
-                  <svg className="w-4 h-4 text-[#4D9995] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg className="w-4 h-4 text-[#97ABB1] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                   <span className="text-sm text-[#0A1628]/60">{item}</span>
@@ -219,7 +219,7 @@ export default function EgyptLiveaboardPage() {
             href="https://wa.me/66971543171?text=Hi!%20I'm%20interested%20in%20the%20Egypt%20Red%20Sea%20Liveaboard%20🤿"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+            className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Reserve Your Spot →

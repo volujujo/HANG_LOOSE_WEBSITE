@@ -58,7 +58,7 @@ export function CategoryCarousel() {
               </p>
               <div className="mt-1 flex justify-start">
                 <span
-                  className="text-sm font-normal uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
+                  className="text-base font-normal uppercase tracking-wider text-[#F8B85D] group-hover:underline underline-offset-4 transition-all"
                   style={{ fontFamily: 'var(--font-space-mono)' }}
                 >
                   Explore Courses →

@@ -8,7 +8,7 @@ export default function CoursesPage() {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
           <p
-            className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+            className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Dive Programs
@@ -50,7 +50,7 @@ export default function CoursesPage() {
           </p>
           <Link
             href="/contact"
-            className="text-sm font-normal uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
+            className="text-base font-normal uppercase tracking-wider text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Get in Touch →

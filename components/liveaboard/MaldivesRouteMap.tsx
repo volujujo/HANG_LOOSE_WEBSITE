@@ -60,8 +60,8 @@ export default function MaldivesRouteMap() {
         <text x="62" y="52" fill="#F9F4EC" opacity="0.15" fontSize="2" textAnchor="middle" fontWeight="bold" style={{ fontFamily: 'var(--font-space-mono)' }}>VAAVU</text>
 
         {/* Indian Ocean label */}
-        <text x="78" y="70" fill="#4D9995" opacity="0.2" fontSize="4" fontWeight="bold" style={{ fontFamily: 'var(--font-space-mono)' }}>INDIAN</text>
-        <text x="78" y="74" fill="#4D9995" opacity="0.2" fontSize="4" fontWeight="bold" style={{ fontFamily: 'var(--font-space-mono)' }}>OCEAN</text>
+        <text x="78" y="70" fill="#97ABB1" opacity="0.2" fontSize="4" fontWeight="bold" style={{ fontFamily: 'var(--font-space-mono)' }}>INDIAN</text>
+        <text x="78" y="74" fill="#97ABB1" opacity="0.2" fontSize="4" fontWeight="bold" style={{ fontFamily: 'var(--font-space-mono)' }}>OCEAN</text>
 
         {/* Route line */}
         <path
@@ -102,7 +102,7 @@ export default function MaldivesRouteMap() {
               <text
                 x={site.x + (site.x > 50 ? -2 : 2.5)}
                 y={site.y + 0.5}
-                fill="#4D9995"
+                fill="#97ABB1"
                 fontSize="1.8"
                 textAnchor={site.x > 50 ? 'end' : 'start'}
                 style={{ fontFamily: 'var(--font-space-mono)' }}
@@ -127,7 +127,7 @@ export default function MaldivesRouteMap() {
           <span className="text-[10px] text-[#F9F4EC]/50" style={{ fontFamily: 'var(--font-space-mono)' }}>Route</span>
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="text-[10px] text-[#4D9995]" style={{ fontFamily: 'var(--font-space-mono)' }}>8 Days · 18+ Dives</span>
+          <span className="text-[10px] text-[#97ABB1]" style={{ fontFamily: 'var(--font-space-mono)' }}>8 Days · 18+ Dives</span>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ const reviews = [
   {
     name: 'Amit',
     initial: 'A',
-    color: 'bg-[#4D9995]',
+    color: 'bg-[#97ABB1]',
     text: "Me and my friends did the open water course and continued to the advanced course. The manager, the instructors and our personal instructor Kit made us feel like home. For sure it's the best diving shop in Koh Tao — personal attention, great vibes, and truly caring people.",
   },
   {
@@ -32,7 +32,7 @@ const reviews = [
   {
     name: 'Laura',
     initial: 'L',
-    color: 'bg-[#4D9995]',
+    color: 'bg-[#97ABB1]',
     text: "I had the best time ever learning how to dive with Hang Loose Divers! The whole team is very professional and friendly. I had my own private instructor Mai — she took the time to explain everything calmly, always making sure I was ok. I truly couldn't have asked for better.",
   },
   {
@@ -44,7 +44,7 @@ const reviews = [
   {
     name: 'Sophie',
     initial: 'S',
-    color: 'bg-[#4D9995]',
+    color: 'bg-[#97ABB1]',
     text: 'As a solo traveler, Hang Loose was everything you could ever ask for. From the moment I walked in, the people there felt like friends rather than staff. Super easygoing, welcoming, and the dives were amazing.',
   },
   {
@@ -56,7 +56,7 @@ const reviews = [
   {
     name: 'James',
     initial: 'J',
-    color: 'bg-[#4D9995]',
+    color: 'bg-[#97ABB1]',
     text: 'I completed my deep and nitrox specialties with Hang Loose Divers. Mery is very experienced and extremely professional and made diving stress-free. The gear was new and in perfect condition, and the dive sites were spectacular.',
   },
   {
@@ -68,7 +68,7 @@ const reviews = [
   {
     name: 'Tom',
     initial: 'T',
-    color: 'bg-[#4D9995]',
+    color: 'bg-[#97ABB1]',
     text: 'Absolutely buzzing to have found this gorgeous dive school on Sairee beach. Unreal location right on the walking street in front of the beach so great place to chill after diving. Professional team and amazing underwater experiences.',
   },
   {
@@ -217,7 +217,7 @@ export default function Home() {
   </div>
 </section>
   {/* Intro Section */}
-<section className="bg-[#FFFAE7] py-14">
+<section className="bg-[#FFFAE7] pt-8 pb-3 md:py-14">
   <div
     ref={introRef}
     className={`mx-auto max-w-3xl px-6 text-center intro-fade ${
@@ -243,7 +243,7 @@ export default function Home() {
 </section>
 
       {/* Vibes Strip */}
-      <section className="bg-[#FFFAE7] py-8">
+      <section className="bg-[#FFFAE7] py-4 md:py-8">
         <div
           ref={vibesRef}
           className={`px-6 md:px-12 lg:px-20 vibes-fade ${vibesVisible ? 'vibes-fade-visible' : ''}`}
@@ -387,10 +387,10 @@ export default function Home() {
       {/* Gallery */}
       <GallerySection />
       {/* Top Courses */}
-      <section className="bg-[#FFFAE7] pt-14 pb-14">
+      <section className="bg-[#FFFAE7] pt-3 md:pt-14 pb-14">
         <div className="px-6 md:px-12 lg:px-20 text-center">
           <p
-            className="text-sm font-normal tracking-[0.2em] uppercase text-[#4D9995]"
+            className="text-sm font-normal tracking-[0.2em] uppercase text-[#97ABB1]"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Featured Courses
@@ -414,7 +414,7 @@ export default function Home() {
         <MobileCarousel count={3} desktopCols={3}>
           {/* Card 1 – Try Scuba Diving */}
           <div
-            className={`snap-center shrink-0 w-[80vw] md:w-auto flex flex-col h-full rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
+            className={`snap-center shrink-0 w-[80vw] md:w-auto flex flex-col rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
               coursesVisible ? 'courses-card-visible' : ''
             }`}
             style={{ transitionDelay: coursesVisible ? '0ms' : '0ms' }}
@@ -426,24 +426,24 @@ export default function Home() {
               <h3 className="text-xl md:text-2xl uppercase text-[#0A1628] mb-2" style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}>
                 Try Scuba Diving
               </h3>
-              <p className="text-sm text-[#0A1628]/60 leading-relaxed line-clamp-3 mb-3">
+              <p className="text-sm text-[#0A1628]/60 leading-relaxed mb-3">
                 Curious about scuba diving? Take your first dive in Koh Tao with our beginner-friendly introductory dive, where you&apos;ll explore tropical reefs and marine life under the guidance of our experienced instructors.
               </p>
               <div className="flex items-center justify-center gap-2 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-3 mt-auto">
                 <div className="flex items-center gap-1.5">
-                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" /></svg>
+                  <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" /></svg>
                   <span>1 Day</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" /></svg>
+                  <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" /></svg>
                   <span>2 Dives</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" /></svg>
-                  <span className="text-[#F8B85D] font-bold">3,500 THB</span>
+                  <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" /></svg>
+                  <span className="font-bold text-[#0A1628]/60">3,500 THB</span>
                 </div>
               </div>
-              <Link href="/courses/beginners/try-scuba" className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300" style={{ fontFamily: 'var(--font-space-mono)' }}>
+              <Link href="/courses/beginners/try-scuba" className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300" style={{ fontFamily: 'var(--font-space-mono)' }}>
                 Learn More →
               </Link>
             </div>
@@ -451,7 +451,7 @@ export default function Home() {
 
           {/* Card 2 – Open Water Diver */}
           <div
-            className={`snap-center shrink-0 w-[80vw] md:w-auto flex flex-col h-full rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
+            className={`snap-center shrink-0 w-[80vw] md:w-auto flex flex-col rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
               coursesVisible ? 'courses-card-visible' : ''
             }`}
             style={{ transitionDelay: coursesVisible ? '120ms' : '0ms' }}
@@ -463,24 +463,24 @@ export default function Home() {
               <h3 className="text-xl md:text-2xl uppercase text-[#0A1628] mb-2" style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}>
                 Open Water Diver
               </h3>
-              <p className="text-sm text-[#0A1628]/60 leading-relaxed line-clamp-3 mb-3">
+              <p className="text-sm text-[#0A1628]/60 leading-relaxed mb-3">
                 Become a certified Open Water Diver in only three days and gain a worldwide-recognized license that lets you dive safely and confidently to 18 meters.
               </p>
-              <div className="flex items-center justify-center gap-2 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-3 mt-auto">
-                <div className="flex items-center gap-1.5">
-                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" /></svg>
+              <div className="flex items-center justify-center gap-1.5 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-3 mt-auto whitespace-nowrap">
+                <div className="flex items-center gap-1">
+                  <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" /></svg>
                   <span>2.5 Days</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" /></svg>
+                <div className="flex items-center gap-1">
+                  <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" /></svg>
                   <span>6 Dives</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" /></svg>
-                  <span className="text-[#F8B85D] font-bold">9,900 THB</span>
+                <div className="flex items-center gap-1">
+                  <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" /></svg>
+                  <span className="font-bold text-[#0A1628]/60">10,500 THB</span>
                 </div>
               </div>
-              <Link href="/courses/beginners/open-water" className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300" style={{ fontFamily: 'var(--font-space-mono)' }}>
+              <Link href="/courses/beginners/open-water" className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300" style={{ fontFamily: 'var(--font-space-mono)' }}>
                 Learn More →
               </Link>
             </div>
@@ -488,7 +488,7 @@ export default function Home() {
 
           {/* Card 3 – Advanced Open Water Diver */}
           <div
-            className={`snap-center shrink-0 w-[80vw] md:w-auto flex flex-col h-full rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
+            className={`snap-center shrink-0 w-[80vw] md:w-auto flex flex-col rounded-xl bg-[#F0EBD8] overflow-hidden transition-all duration-300 ease-out courses-card ${
               coursesVisible ? 'courses-card-visible' : ''
             }`}
             style={{ transitionDelay: coursesVisible ? '240ms' : '0ms' }}
@@ -500,24 +500,24 @@ export default function Home() {
               <h3 className="text-xl md:text-2xl uppercase text-[#0A1628] mb-2" style={{ fontFamily: 'var(--font-space-mono)', fontWeight: 600 }}>
                 Advanced Diver
               </h3>
-              <p className="text-sm text-[#0A1628]/60 leading-relaxed line-clamp-3 mb-3">
+              <p className="text-sm text-[#0A1628]/60 leading-relaxed mb-3">
                 The Advanced Open Water Diver course takes your diving further with deeper dives, night adventures, wreck exploration, and improved buoyancy—all while building confidence and maximizing fun underwater.
               </p>
               <div className="flex items-center justify-center gap-2 md:gap-3 text-xs md:text-sm font-normal text-[#0A1628]/50 mb-3 mt-auto">
                 <div className="flex items-center gap-1.5">
-                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" /></svg>
+                  <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7" /><path d="M12 9v3l2 2" /></svg>
                   <span>2 Days</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" /></svg>
+                  <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 15c1.2 0 1.8-.5 2.4-1 .6-.5 1.2-1 2.4-1s1.8.5 2.4 1c.6.5 1.2 1 2.4 1s1.8-.5 2.4-1c.6-.5 1.2-1 2.4-1" /></svg>
                   <span>5 Dives</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <svg className="h-5 w-5 text-[#4D9995]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" /></svg>
-                  <span className="text-[#F8B85D] font-bold">9,500 THB</span>
+                  <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" /></svg>
+                  <span className="font-bold text-[#0A1628]/60">9,500 THB</span>
                 </div>
               </div>
-              <Link href="/courses/advanced/advanced-open-water" className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300" style={{ fontFamily: 'var(--font-space-mono)' }}>
+              <Link href="/courses/advanced/advanced-open-water" className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300" style={{ fontFamily: 'var(--font-space-mono)' }}>
                 Learn More →
               </Link>
             </div>
@@ -529,7 +529,7 @@ export default function Home() {
         <div className="mt-12 px-6 md:px-12 lg:px-20 text-center">
           <Link
             href="/courses"
-            className="inline-flex border-none bg-transparent px-0 py-2 text-sm font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4"
+            className="inline-flex border-none bg-transparent px-0 py-2 text-xl md:text-2xl font-normal uppercase tracking-wide text-[#F8B85D] transition-all duration-300 hover:underline underline-offset-4"
             style={{ fontFamily: 'var(--font-space-mono)' }}
           >
             Explore All Courses →
@@ -540,22 +540,13 @@ export default function Home() {
       {/* Who We Are + How We Work */}
       <section className="bg-[#FFFAE7] py-12 md:py-16">
         <div className="px-6 md:px-12 lg:px-20">
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-16">
 
             {/* Who We Are */}
             <div className="bg-[#F0EBD8] rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
-              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px]">
-                <Image
-                  src="/gallery/photo1.webp"
-                  alt="Hang Loose Divers team on Koh Tao"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
               <div className="flex flex-col justify-center p-8 md:p-12">
                 <p
-                  className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+                  className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
                   style={{ fontFamily: 'var(--font-space-mono)' }}
                 >
                   Who We Are
@@ -575,19 +566,28 @@ export default function Home() {
                 </p>
                 <Link
                   href="/about/who-we-are"
-                  className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
+                  className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
                   style={{ fontFamily: 'var(--font-space-mono)' }}
                 >
                   More About Who We Are →
                 </Link>
               </div>
+              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px]">
+                <Image
+                  src="/gallery/photo1.webp"
+                  alt="Hang Loose Divers team on Koh Tao"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </div>
 
             {/* How We Work */}
             <div className="bg-[#F0EBD8] rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
-              <div className="flex flex-col justify-center p-8 md:p-12 order-2 lg:order-1">
+              <div className="flex flex-col justify-center p-8 md:p-12 lg:order-2">
                 <p
-                  className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+                  className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
                   style={{ fontFamily: 'var(--font-space-mono)' }}
                 >
                   How We Work
@@ -608,13 +608,13 @@ export default function Home() {
                 </p>
                 <Link
                   href="/about/how-we-work"
-                  className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
+                  className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
                   style={{ fontFamily: 'var(--font-space-mono)' }}
                 >
-                  More About How We Work →
+                  More About How We Work&nbsp;→
                 </Link>
               </div>
-              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px] order-1 lg:order-2">
+              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px] lg:order-1">
                 <Image
                   src="/gallery/photo4.webp"
                   alt="Diving the Hang Loose way"
@@ -635,7 +635,7 @@ export default function Home() {
           {/* Header */}
           <div className="text-center mb-12">
             <p
-              className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+              className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Reviews
@@ -789,7 +789,7 @@ export default function Home() {
               href={googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
+              className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Read All Reviews on Google →
@@ -804,7 +804,7 @@ export default function Home() {
           {/* Header */}
           <div className="text-center mb-12">
             <p
-              className="text-sm font-normal tracking-[0.25em] uppercase text-[#4D9995] mb-4"
+              className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               FAQ
@@ -868,7 +868,7 @@ export default function Home() {
             <p className="text-sm text-[#97ABB1] mb-4">Still have questions?</p>
             <Link
               href="/contact"
-              className="text-sm font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
+              className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Get in Touch →

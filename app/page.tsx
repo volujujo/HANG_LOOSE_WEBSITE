@@ -243,7 +243,7 @@ export default function Home() {
 </section>
 
       {/* Vibes Strip */}
-      <section className="bg-[#FFFAE7] pt-4 pb-14 md:py-8">
+      <section className="bg-[#FFFAE7] pt-4 pb-14 md:pt-8 md:pb-14">
         <div
           ref={vibesRef}
           className={`px-6 md:px-12 lg:px-20 vibes-fade ${vibesVisible ? 'vibes-fade-visible' : ''}`}

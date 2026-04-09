@@ -22,7 +22,7 @@ export function GallerySection() {
     <section
       id="gallery"
       ref={ref}
-      className="bg-[#FFFAE7] px-6 md:px-12 lg:px-20 pb-8 md:pb-14"
+      className="bg-[#FFFAE7] px-6 md:px-12 lg:px-20 pb-0 md:pb-14"
     >
       {/* Mobile layout: 2-column masonry-style */}
       <div

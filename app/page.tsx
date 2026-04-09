@@ -243,7 +243,7 @@ export default function Home() {
 </section>
 
       {/* Vibes Strip */}
-      <section className="bg-[#FFFAE7] py-4 md:py-8">
+      <section className="bg-[#FFFAE7] pt-4 pb-14 md:py-8">
         <div
           ref={vibesRef}
           className={`px-6 md:px-12 lg:px-20 vibes-fade ${vibesVisible ? 'vibes-fade-visible' : ''}`}
@@ -387,7 +387,7 @@ export default function Home() {
       {/* Gallery */}
       <GallerySection />
       {/* Top Courses */}
-      <section className="bg-[#FFFAE7] pt-3 md:pt-14 pb-14">
+      <section className="bg-[#FFFAE7] pt-14 md:pt-14 pb-14">
         <div className="px-6 md:px-12 lg:px-20 text-center">
           <p
             className="text-sm font-normal tracking-[0.2em] uppercase text-[#97ABB1]"
@@ -543,62 +543,56 @@ export default function Home() {
           <div className="flex flex-col gap-16">
 
             {/* Who We Are */}
-            <div className="bg-[#F0EBD8] rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
-              <div className="flex flex-col justify-center p-8 md:p-12">
-                <p
-                  className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
-                  style={{ fontFamily: 'var(--font-space-mono)' }}
-                >
-                  Who We Are
-                </p>
-                <h2
-                  className="text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628] mb-6"
-                  style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
-                >
-                  By the Ocean Lies the Home of Good Vibes
-                </h2>
-                <p className="text-base md:text-lg text-black leading-relaxed mb-8">
+            <div className="bg-[#F0EBD8] rounded-2xl overflow-hidden flex flex-col lg:grid lg:grid-cols-2">
+              {/* Mobile: title */}
+              <div className="lg:hidden px-8 pt-8 pb-4">
+                <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4" style={{ fontFamily: 'var(--font-space-mono)' }}>Who We Are</p>
+                <h2 className="text-2xl tracking-tight uppercase text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>By the Ocean Lies the Home of Good Vibes</h2>
+              </div>
+              {/* Image */}
+              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px] lg:order-2">
+                <Image src="/gallery/photo1.webp" alt="Hang Loose Divers team on Koh Tao" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              </div>
+              {/* Mobile: text + CTA */}
+              <div className="lg:hidden px-8 pt-6 pb-8">
+                <p className="text-base text-black leading-relaxed mb-8">
                   We believe diving is more than a hobby – it&apos;s a lifestyle – and we want
                   you to immerse yourself in it at one of the most stunning diving destinations
                   across the planet. And in the end, we want to leave you with not only the best
                   diving experience, but also memories for life, new friends and a feeling
                   that this adventure should never end.
                 </p>
-                <Link
-                  href="/about/who-we-are"
-                  className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
-                  style={{ fontFamily: 'var(--font-space-mono)' }}
-                >
-                  More About Who We Are →
-                </Link>
+                <Link href="/about/who-we-are" className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2" style={{ fontFamily: 'var(--font-space-mono)' }}>More About Who We Are →</Link>
               </div>
-              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px]">
-                <Image
-                  src="/gallery/photo1.webp"
-                  alt="Hang Loose Divers team on Koh Tao"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              {/* Desktop: full content */}
+              <div className="hidden lg:flex flex-col justify-center p-12 lg:order-1">
+                <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4" style={{ fontFamily: 'var(--font-space-mono)' }}>Who We Are</p>
+                <h2 className="text-4xl tracking-tight uppercase text-[#0A1628] mb-6" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>By the Ocean Lies the Home of Good Vibes</h2>
+                <p className="text-lg text-black leading-relaxed mb-8">
+                  We believe diving is more than a hobby – it&apos;s a lifestyle – and we want
+                  you to immerse yourself in it at one of the most stunning diving destinations
+                  across the planet. And in the end, we want to leave you with not only the best
+                  diving experience, but also memories for life, new friends and a feeling
+                  that this adventure should never end.
+                </p>
+                <Link href="/about/who-we-are" className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2" style={{ fontFamily: 'var(--font-space-mono)' }}>More About Who We Are →</Link>
               </div>
             </div>
 
             {/* How We Work */}
-            <div className="bg-[#F0EBD8] rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
-              <div className="flex flex-col justify-center p-8 md:p-12 lg:order-2">
-                <p
-                  className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4"
-                  style={{ fontFamily: 'var(--font-space-mono)' }}
-                >
-                  How We Work
-                </p>
-                <h2
-                  className="text-2xl md:text-4xl tracking-tight uppercase text-[#0A1628] mb-6"
-                  style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}
-                >
-                  The Hang Loose Way
-                </h2>
-                <p className="text-base md:text-lg text-black leading-relaxed mb-8">
+            <div className="bg-[#F0EBD8] rounded-2xl overflow-hidden flex flex-col lg:grid lg:grid-cols-2">
+              {/* Mobile: title */}
+              <div className="lg:hidden px-8 pt-8 pb-4">
+                <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4" style={{ fontFamily: 'var(--font-space-mono)' }}>How We Work</p>
+                <h2 className="text-2xl tracking-tight uppercase text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>The Hang Loose Way</h2>
+              </div>
+              {/* Image */}
+              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px] lg:order-1">
+                <Image src="/gallery/photo4.webp" alt="Diving the Hang Loose way" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              </div>
+              {/* Mobile: text + CTA */}
+              <div className="lg:hidden px-8 pt-6 pb-8">
+                <p className="text-base text-black leading-relaxed mb-8">
                   At Hang Loose Divers, we keep things flowing the way a great dive day
                   should—easy starts, smooth runs, and zero unnecessary stress. Everything
                   is set up to let you focus on the ocean, the experience, and the people
@@ -606,22 +600,21 @@ export default function Home() {
                   sunset of the day, this is diving done with intention, rhythm, and good
                   vibes only.
                 </p>
-                <Link
-                  href="/about/how-we-work"
-                  className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
-                  style={{ fontFamily: 'var(--font-space-mono)' }}
-                >
-                  More About How We Work&nbsp;→
-                </Link>
+                <Link href="/about/how-we-work" className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2" style={{ fontFamily: 'var(--font-space-mono)' }}>More About How We Work&nbsp;→</Link>
               </div>
-              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px] lg:order-1">
-                <Image
-                  src="/gallery/photo4.webp"
-                  alt="Diving the Hang Loose way"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              {/* Desktop: full content */}
+              <div className="hidden lg:flex flex-col justify-center p-12 lg:order-2">
+                <p className="text-sm font-normal tracking-[0.25em] uppercase text-[#97ABB1] mb-4" style={{ fontFamily: 'var(--font-space-mono)' }}>How We Work</p>
+                <h2 className="text-4xl tracking-tight uppercase text-[#0A1628] mb-6" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>The Hang Loose Way</h2>
+                <p className="text-lg text-black leading-relaxed mb-8">
+                  At Hang Loose Divers, we keep things flowing the way a great dive day
+                  should—easy starts, smooth runs, and zero unnecessary stress. Everything
+                  is set up to let you focus on the ocean, the experience, and the people
+                  you&apos;re sharing it with. From the first step onto the sand to the last
+                  sunset of the day, this is diving done with intention, rhythm, and good
+                  vibes only.
+                </p>
+                <Link href="/about/how-we-work" className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2" style={{ fontFamily: 'var(--font-space-mono)' }}>More About How We Work&nbsp;→</Link>
               </div>
             </div>
 
@@ -789,7 +782,7 @@ export default function Home() {
               href={googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
+              className="text-xl md:text-2xl font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Read All Reviews on Google →
@@ -868,7 +861,7 @@ export default function Home() {
             <p className="text-sm text-[#97ABB1] mb-4">Still have questions?</p>
             <Link
               href="/contact"
-              className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
+              className="text-xl md:text-2xl font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300 px-0 py-2"
               style={{ fontFamily: 'var(--font-space-mono)' }}
             >
               Get in Touch →

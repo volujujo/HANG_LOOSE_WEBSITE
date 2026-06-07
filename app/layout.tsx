@@ -7,6 +7,9 @@ import WhatsappButton from '@/components/ui/WhatsappButton'
 export const metadata: Metadata = {
   title: 'Hang Loose Divers — Koh Tao',
   description: 'Scuba diving courses, fun dives and liveaboards in Koh Tao, Thailand',
+  icons: {
+    icon: '/photos/logo-shaka.png',
+  },
 }
 
 export default function RootLayout({

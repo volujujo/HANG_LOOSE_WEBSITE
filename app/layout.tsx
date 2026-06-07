@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Hang Loose Divers — Koh Tao',
   description: 'Scuba diving courses, fun dives and liveaboards in Koh Tao, Thailand',
   icons: {
-    icon: '/logo-shaka.png',
+    icon: '/photos/logo-shaka.png',
   },
 }
 

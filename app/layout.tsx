@@ -7,6 +7,9 @@ import WhatsappButton from '@/components/ui/WhatsappButton'
 export const metadata: Metadata = {
   title: 'Hang Loose Divers — Koh Tao',
   description: 'Scuba diving courses, fun dives and liveaboards in Koh Tao, Thailand',
+  icons: {
+    icon: '/photos/logo-shaka.png',
+  },
 }
 
 export default function RootLayout({
@@ -16,9 +19,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/photos/logo-shaka.png" type="image/png" />
-      </head>
       <body>
         <Navbar />
         {children}

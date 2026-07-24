@@ -33,7 +33,7 @@ export function GallerySection() {
         {/* Top row: large photo1 — full width, matches height of photo2 */}
         <div className="relative overflow-hidden rounded-2xl aspect-[3/2]">
           <Image
-            src="/gallery/photo1.webp"
+            src="/gallery/homepagepic1.webp"
             alt="Diving experience in Koh Tao"
             fill
             className="object-cover"
@@ -44,7 +44,7 @@ export function GallerySection() {
         <div className="flex gap-3">
           <div className="relative overflow-hidden rounded-2xl aspect-[3/4] flex-1">
             <Image
-              src="/gallery/photo2.webp"
+              src="/gallery/homepagepic2.webp"
               alt="Diving boat and ocean view"
               fill
               className="object-cover"
@@ -54,7 +54,7 @@ export function GallerySection() {
           <div className="flex flex-col gap-3 flex-1">
             <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <Image
-                src="/gallery/photo3.webp"
+                src="/gallery/homepagepic3.webp"
                 alt="Underwater scene with diver"
                 fill
                 className="object-cover"
@@ -63,7 +63,7 @@ export function GallerySection() {
             </div>
             <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <Image
-                src="/gallery/photo4.webp"
+                src="/gallery/homepagepic4.webp"
                 alt="Dive center atmosphere"
                 fill
                 className="object-cover"
@@ -82,9 +82,9 @@ export function GallerySection() {
         }`}
       >
         {/* Left: Large photo1 ~50% width, full height */}
-        <div className="relative overflow-hidden rounded-2xl flex-[1.1] min-w-0">
+        <div className="relative overflow-hidden rounded-2xl flex-[4] min-w-0">
           <Image
-            src="/gallery/photo1.webp"
+            src="/gallery/homepagepic1.webp"
             alt="Diving experience in Koh Tao"
             fill
             className="object-cover"
@@ -94,9 +94,9 @@ export function GallerySection() {
         </div>
 
         {/* Middle: photo2 ~25% width, full height */}
-        <div className="relative overflow-hidden rounded-2xl flex-[0.55] min-w-0">
+        <div className="relative overflow-hidden rounded-2xl flex-[2] min-w-0">
           <Image
-            src="/gallery/photo2.webp"
+            src="/gallery/homepagepic2.webp"
             alt="Diving boat and ocean view"
             fill
             className="object-cover"
@@ -105,10 +105,10 @@ export function GallerySection() {
         </div>
 
         {/* Right column: photo3 + photo4 stacked, ~25% width */}
-        <div className="flex flex-col gap-4 flex-[0.45] min-w-0">
+        <div className="flex flex-col gap-4 flex-[1.5] min-w-0">
           <div className="relative overflow-hidden rounded-2xl flex-1">
             <Image
-              src="/gallery/photo3.webp"
+              src="/gallery/homepagepic3.webp"
               alt="Underwater scene with diver"
               fill
               className="object-cover"
@@ -117,7 +117,7 @@ export function GallerySection() {
           </div>
           <div className="relative overflow-hidden rounded-2xl flex-1">
             <Image
-              src="/gallery/photo4.webp"
+              src="/gallery/homepagepic4.webp"
               alt="Dive center atmosphere"
               fill
               className="object-cover"

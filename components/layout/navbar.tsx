@@ -53,7 +53,6 @@ const navItems = [
         group: '',
         items: [
           { label: 'Maldives', href: '/liveaboard/maldives' },
-          { label: 'Egypt', href: '/liveaboard/egypt' },
         ],
       },
     ],

@@ -8,25 +8,25 @@ const categories = [
   {
     title: 'Beginners',
     href: '/courses/beginners',
-    image: '/gallery/photo1.webp',
+    image: '/gallery/homepagebasic.webp',
     description: "Thinking about scuba diving? Our beginner programs focus on comfort, confidence, and fun—perfect for anyone curious about exploring the ocean for the first time.",
   },
   {
     title: 'Advanced',
     href: '/courses/advanced',
-    image: '/gallery/photo3.webp',
+    image: '/gallery/homepageadv.webp',
     description: "Ready to step up as a diver? Our specialty courses are built to elevate your skills, confidence, and control—whether that means diving deeper, exploring wrecks, or experiencing the ocean after dark.",
   },
   {
     title: 'Professionals',
     href: '/courses/professionals',
-    image: '/gallery/photo4.webp',
+    image: '/gallery/infoitc2.webp',
     description: "Where passion turns into purpose. From Divemaster to Instructor, our training is hands-on, high-standard, and fully dialed in—shaping professionals who represent the ocean the right way.",
   },
   {
     title: 'Packages',
     href: '/packages',
-    image: '/gallery/photo2.webp',
+    image: '/gallery/homepageowd.webp',
     description: "Save time and money by combining courses. Our combo deals are designed for divers who want to progress faster and get the most out of their time on Koh Tao.",
   },
 ]

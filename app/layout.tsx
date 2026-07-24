@@ -4,9 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Hang Loose Divers — Koh Tao',
   description: 'Scuba diving courses, fun dives and liveaboards in Koh Tao, Thailand',
-  icons: {
-    icon: '/photos/logo-shaka.png',
-  },
+  // Favicon is provided by the app/icon.png file convention (yellow circle logo).
 }
 
 export default function RootLayout({

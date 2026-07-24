@@ -13,6 +13,16 @@ const trips = [
     price: 'From €2,500',
     description: "Sail through the turquoise heart of the Indian Ocean. Iconic sites, sunlit atolls, mantas, whale sharks, and drift dives through channels and pinnacles.",
   },
+  {
+    title: 'Red Sea South, Egypt',
+    href: '/liveaboard/egypt',
+    image: '/gallery/egypt1.webp',
+    date: 'June 12–19, 2027',
+    boat: 'Emperor Asmaa',
+    dives: '20+ Dives',
+    price: 'From €1,550',
+    description: "Cruise the southern gems of the Red Sea — Daedalus, Sataya and Elphinstone. Vibrant coral gardens, dramatic drop-offs, hammerheads, oceanic mantas and spinner dolphins.",
+  },
 ]
 
 export default function LiveaboardPage() {

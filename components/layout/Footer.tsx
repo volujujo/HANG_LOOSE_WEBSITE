@@ -16,6 +16,7 @@ const footerLinks = [
       { label: 'Fun Dives', href: '/fun-dives/fun-dives' },
       { label: 'Refresh Program', href: '/fun-dives/refresh-program' },
       { label: 'Liveaboard Maldives', href: '/liveaboard/maldives' },
+      { label: 'Liveaboard Egypt', href: '/liveaboard/egypt' },
       { label: 'Packages', href: '/packages' },
     ],
   },

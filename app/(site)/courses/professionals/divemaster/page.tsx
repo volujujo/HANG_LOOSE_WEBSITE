@@ -22,7 +22,6 @@ export default function DivemasterPage() {
               "Divemaster certification",
               "Science of Diving certification",
               "Deep Diving certification",
-              "Enriched Air Nitrox certification",
               "Marine Ecology certification",
               "Computer Diving certification",
             ].map((item, i) => (

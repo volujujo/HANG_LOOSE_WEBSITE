@@ -45,7 +45,7 @@ const courses = [
     image: '/gallery/infonight.webp',
     duration: '2 Days',
     dives: '2 Dives',
-    price: '6,500 THB',
+    price: '7,000 THB',
     description: "Night dives reveal a side of the ocean few divers ever see. Learn how to plan, navigate, and dive confidently in low-light conditions.",
   },
   {
@@ -90,7 +90,7 @@ const courses = [
     image: '/gallery/infodecompression.webp',
     duration: '3 Days',
     dives: '4 Dives',
-    price: '8,000 THB',
+    price: '12,000 THB',
     description: "Go beyond no-decompression limits and unlock longer, deeper, more rewarding dives with the SSI Decompression Diving Specialty.",
   },
   {

@@ -477,7 +477,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-1">
                   <svg className="h-5 w-5 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" /></svg>
-                  <span className="font-bold text-[#0A1628]/60">10,500 THB</span>
+                  <span className="font-bold text-[#0A1628]/60">9,900 THB</span>
                 </div>
               </div>
               <Link href="/courses/beginners/open-water" className="text-base font-normal uppercase tracking-wide text-[#F8B85D] hover:underline underline-offset-4 transition-all duration-300" style={{ fontFamily: 'var(--font-space-mono)' }}>
@@ -550,7 +550,7 @@ export default function Home() {
                 <h2 className="text-2xl tracking-tight uppercase text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>By the Ocean Lies the Home of Good Vibes</h2>
               </div>
               {/* Image */}
-              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px] lg:order-2">
+              <div className="relative aspect-[5/4] pb-[80%] lg:pb-0 lg:aspect-auto lg:min-h-[520px] lg:order-2">
                 <Image src="/gallery/aboutwhowearehome.webp" alt="Hang Loose Divers team on Koh Tao" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
               </div>
               {/* Mobile: text + CTA */}
@@ -587,7 +587,7 @@ export default function Home() {
                 <h2 className="text-2xl tracking-tight uppercase text-[#0A1628]" style={{ fontFamily: 'var(--font-space-mono)', lineHeight: 1.1 }}>The Hang Loose Way</h2>
               </div>
               {/* Image */}
-              <div className="relative aspect-[5/4] lg:aspect-auto lg:min-h-[520px] lg:order-1">
+              <div className="relative aspect-[5/4] pb-[80%] lg:pb-0 lg:aspect-auto lg:min-h-[520px] lg:order-1">
                 <Image src="/gallery/abouthowweworkhome.webp" alt="Diving the Hang Loose way" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
               </div>
               {/* Mobile: text + CTA */}

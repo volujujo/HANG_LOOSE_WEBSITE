@@ -51,7 +51,7 @@ export default function HowWeWorkPage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] lg:aspect-auto rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] pb-[75%] lg:pb-0 lg:aspect-auto rounded-xl overflow-hidden">
               <Image
                 src="/gallery/aboutbeachfrontinfo.webp"
                 alt="Hang Loose Divers beachfront location on Sairee Beach"
@@ -95,7 +95,7 @@ export default function HowWeWorkPage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] lg:aspect-auto rounded-xl overflow-hidden lg:order-1">
+            <div className="relative aspect-[4/3] pb-[75%] lg:pb-0 lg:aspect-auto rounded-xl overflow-hidden lg:order-1">
               <Image
                 src="/gallery/abouttopnotchinstrutorsinfo.webp"
                 alt="Hang Loose Divers professional dive team"
@@ -134,7 +134,7 @@ export default function HowWeWorkPage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] lg:aspect-auto rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] pb-[75%] lg:pb-0 lg:aspect-auto rounded-xl overflow-hidden">
               <Image
                 src="/gallery/aboutbrandnewgearinfo.webp"
                 alt="Brand new diving gear at Hang Loose Divers"
@@ -173,7 +173,7 @@ export default function HowWeWorkPage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] lg:aspect-auto rounded-xl overflow-hidden lg:order-1">
+            <div className="relative aspect-[4/3] pb-[75%] lg:pb-0 lg:aspect-auto rounded-xl overflow-hidden lg:order-1">
               <Image
                 src="/gallery/aboutourboatinfo.webp"
                 alt="Hang Loose Divers boat"

@@ -138,6 +138,9 @@ export default function Footer() {
           <p className="text-center text-xs text-[#0A1628]/30">
             © {new Date().getFullYear()} Hang Loose Divers. All rights reserved.
           </p>
+          <p className="mt-2 text-center text-xs text-[#0A1628]/30">
+            Pictures by Damian Almua Underwater Photography
+          </p>
         </div>
       </div>
     </footer>

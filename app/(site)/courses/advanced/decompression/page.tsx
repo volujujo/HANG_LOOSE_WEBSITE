@@ -118,7 +118,7 @@ export default function DecompressionPage() {
                   <svg className="h-5 w-5 md:h-6 md:w-6 text-[#97ABB1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="7" width="20" height="10" rx="1.5" /><circle cx="12" cy="12" r="2.5" /><path d="M6 10v4M18 10v4" />
                   </svg>
-                  <span className="text-sm md:text-base font-bold text-[#0A1628]/60" style={{ fontFamily: 'var(--font-space-mono)' }}>8,000 THB</span>
+                  <span className="text-sm md:text-base font-bold text-[#0A1628]/60" style={{ fontFamily: 'var(--font-space-mono)' }}>12,000 THB</span>
                 </div>
               </div>
 

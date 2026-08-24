@@ -20,7 +20,7 @@ const courses = [
     image: '/gallery/infoowd.webp',
     duration: '2.5 Days',
     dives: '6 Dives',
-    price: '10,500 THB',
+    price: '9,900 THB',
     description: "The SSI Open Water Diver course is your gateway to scuba diving, certifying you to dive to 18 meters. This worldwide recognized and valid for life certification gives you the freedom to dive anywhere your travels take you.",
   },
 ]

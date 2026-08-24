@@ -49,7 +49,7 @@ export default function WhoWeArePage() {
                 underwater world.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] pb-[75%] rounded-xl overflow-hidden">
               <Image
                 src="/gallery/dsc00683.webp"
                 alt="Good vibes at Hang Loose Divers"
@@ -81,7 +81,7 @@ export default function WhoWeArePage() {
                 <p>To the local communities, by supporting local businesses and embracing local culture.</p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] lg:aspect-auto rounded-xl overflow-hidden lg:order-1">
+            <div className="relative aspect-[4/3] pb-[75%] lg:pb-0 lg:aspect-auto rounded-xl overflow-hidden lg:order-1">
               <Image
                 src="/gallery/aboutbeafriendinfo.webp"
                 alt="Be a friend — Hang Loose Divers mindset"
@@ -129,7 +129,7 @@ export default function WhoWeArePage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] lg:aspect-auto rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] pb-[75%] lg:pb-0 lg:aspect-auto rounded-xl overflow-hidden">
               <Image
                 src="/gallery/aboutourstoryinfo.webp"
                 alt="Mery and Marga — founders of Hang Loose Divers"
